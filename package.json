@@ -1,6 +1,10 @@
 {
   "name": "monorepo",
   "packageManager": "yarn@4.1.1",
+  "scripts": {
+    "build-micros": "yarn workspace mr-solid run build && yarn workspace mr-solid run serve",
+    "build-main": "yarn workspace mr-astro run build && yarn workspace mr-astro run preview"
+  },
   "workspaces": [
     "packages/*"
   ],

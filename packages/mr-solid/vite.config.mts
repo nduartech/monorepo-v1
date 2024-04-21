@@ -18,7 +18,7 @@ export default defineConfig({
   },
   preview: {
     port: 7300,
-    open: true,
+    open: false,
   },
   build: {
     target: 'esnext',
