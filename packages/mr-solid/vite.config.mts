@@ -11,7 +11,11 @@ export default defineConfig({
       autoname: true, // e.g. enable autoname
     }),
     solidPlugin(),
-    cssInjectedByJsPlugin(),
+    cssInjectedByJsPlugin({
+      injectCode: (cssCode: string, options) => {
+        return `try{if(typeof document != 'undefined'){var elementStyle = document.createElement('style');elementStyle.appendChild(document.createTextNode(${cssCode}));document.head.appendChild(elementStyle);document.addEventListener('astro:page-load', ()=>{var elementStyle = document.createElement('style');elementStyle.appendChild(document.createTextNode(${cssCode}));document.head.appendChild(elementStyle);});}}catch(e){console.error('vite-plugin-css-injected-by-js', e);}`
+      }
+    }),
   ],
   server: {
     port: 3000,
