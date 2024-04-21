@@ -14,7 +14,19 @@ export default defineConfig({
     cssInjectedByJsPlugin({
       injectCode: (cssCode: string, options) => {
         return `try{if(typeof document != 'undefined'){var elementStyle = document.createElement('style');elementStyle.appendChild(document.createTextNode(${cssCode}));document.head.appendChild(elementStyle);document.addEventListener('astro:page-load', ()=>{var elementStyle = document.createElement('style');elementStyle.appendChild(document.createTextNode(${cssCode}));document.head.appendChild(elementStyle);});}}catch(e){console.error('vite-plugin-css-injected-by-js', e);}`
-      }
+      },
+      dev: {
+        enableDev: true,
+        removeStyleCodeFunction: function removeStyleCode(id: string) {
+          (function removeStyleInjected() {
+            const elementsToRemove = document.querySelectorAll("style[data-vite-dev-id='${id}']");
+            elementsToRemove.forEach(element => {
+              element.remove();
+            });
+          })()
+        }
+      },
+      preRenderCSSCode: (cssCode) => cssCode
     }),
   ],
   server: {

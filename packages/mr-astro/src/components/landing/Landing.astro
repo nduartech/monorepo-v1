@@ -5,9 +5,11 @@
     import { navigate } from "astro:transitions/client"
 
     document.addEventListener('astro:page-load', ()=>{
+      if(window.location.pathname === "/") {
         document.querySelectorAll('.softwareEng')[0].addEventListener('click', () => {
-            navigate('/software-engineer');
-        });
+          navigate('/software-engineer');
+        },{once: true});
+      }
     });
 </script>
 <div class="w-screen h-screen flex dark">
