@@ -1,12 +1,12 @@
 // @ts-ignore
-import MicroFrontendC from "http://localhost:7300/bundle.js";
+import MicroFrontend from "http://localhost:7300/bundle.js";
 
 function App() {
-    return (
-        <>
-            <MicroFrontendC />
-        </>
-    );
+  return (
+    <>
+      <MicroFrontend />
+    </>
+  );
 }
 
 export default App;
