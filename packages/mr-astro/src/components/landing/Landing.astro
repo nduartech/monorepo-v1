@@ -1,6 +1,11 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 ---
+<style>
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+</style>
 <script>
   import { navigate } from "astro:transitions/client";
 
@@ -13,28 +18,32 @@ import { ViewTransitions } from "astro:transitions";
   });
 </script>
 <div class="w-screen h-screen flex dark">
-  <div class="w-full h-screen bg-[url('/landing.svg')] dark:bg-[url('/landing-dark.svg')] bg-cover flex flex-col justify-start items-center">
-    <div class="flex flex-col justify-start items-center">
-      <div class="image-container my-10 w-2/12 min-w-36 max-w-48 h-2/12 flex justify-center items-center">
-        <img class="rounded-full object-fill p-3" src="/me.png" alt="Nathan" />
+  <div
+    class="w-full h-screen bg-[url('/landing.svg')] dark:bg-[url('/landing-dark.svg')] bg-cover flex flex-row justify-center items-start">
+    <div class="flex flex-col lg:flex-row justify-center items-center mt-24 lg:mt-36">
+      <div class="lg:w-full">
+        <div class="flex flex-row justify-center items-center lg:flex-col w-full space-x-5 my-5 lg:space-x-0 lg:space-y-0">
+          <div class="image-container w-2/12 min-w-36 max-w-48 h-2/12 flex justify-center items-center">
+            <img class="rounded-full object-fill p-3" src="/me.png" alt="Nathan" />
+          </div>
+          <p class="text-3xl text-regal-blue-500 dark:text-slate-100 my-2">Hi. I'm Nathan.</p>
+        </div>
       </div>
-      <p class="text-3xl text-regal-blue-500 dark:text-slate-100 my-2">Hi. I'm Nathan.</p>
-      <div
-        class="flex flex-col space-y-3 lg:flex-row md:flex-row lg:space-x-8 lg:space-y-0 md:space-x-8 md:space-y-0 button-bar justify-center items-center w-full my-10 text-regal-blue-500 dark:text-slate-100">
-        <button type="button"
-          class="softwareEng bg-regal-blue-900 hover:bg-regal-blue-950 w-full lg:w-fit md:w-fit py-2 px-2 text-sm font-medium text-white border border-transparent rounded-lg focus:outline-none">
-          Full Stack Software Engineer
-        </button>
-        <p class="hidden lg:flex">~</p>
-        <button
-          class="bg-regal-blue-900 hover:bg-regal-blue-950 w-full lg:w-fit md:w-fit py-2 px-2 text-sm font-medium text-white border border-transparent rounded-lg focus:outline-none">
-          Proliferate Reader
-        </button>
-        <p class="hidden lg:flex">~</p>
-        <button
-          class="bg-regal-blue-900 hover:bg-regal-blue-950 w-full lg:w-fit md:w-fit py-2 px-2 text-sm font-medium text-white border border-transparent rounded-lg focus:outline-none">
-          Proud Husband and Father
-        </button>
+      <div class="w-4/5 lg:w-full">
+        <div class="space-y-2.5">
+          <button type="button"
+                  class="softwareEng bg-regal-blue-900 hover:bg-regal-blue-950 w-full py-2 px-2 text-sm font-medium text-white border border-transparent rounded-lg focus:outline-none">
+            Full Stack Software Engineer
+          </button>
+          <button
+            class="bg-regal-blue-900 hover:bg-regal-blue-950 w-full py-2 px-2 text-sm font-medium text-white border border-transparent rounded-lg focus:outline-none">
+            Proliferate Reader
+          </button>
+          <button
+            class="bg-regal-blue-900 hover:bg-regal-blue-950 w-full py-2 px-2 text-sm font-medium text-white border border-transparent rounded-lg focus:outline-none">
+            Proud Husband and Father
+          </button>
+        </div>
       </div>
     </div>
   </div>
