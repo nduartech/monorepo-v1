@@ -1,0 +1,33 @@
+---
+
+---
+<script >
+  document.addEventListener("astro:page-load", () => {
+    const theme = (() => {
+      if (typeof window.localStorage !== "undefined" && window.localStorage.getItem("theme")) {
+        return window.localStorage.getItem("theme");
+      }
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
+      }
+      return "light";
+    })();
+
+    if (theme === "light") {
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
+    }
+    window.localStorage.setItem("theme", theme);
+
+    document.querySelectorAll(".dayNight")[0].addEventListener("click", () => {
+      let page = document.documentElement;
+      page.classList.contains("dark") ? page.classList.remove("dark") : page.classList.add("dark");
+      window.localStorage.setItem("theme", window.localStorage.getItem("theme") === "light" ? "dark" : "light");
+    });
+  });
+</script>
+<div class="dayNight">
+  <i class="iconoir-half-moon before:size-8 before:text-regal-blue-100 inline-flex dark:hidden"></i>
+  <i class="hidden dark:inline-flex iconoir-sun-light before:size-8 before:text-regal-blue-100"></i>
+</div>

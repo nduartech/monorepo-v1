@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
+import DayNightToggle  from '../common/DayNightToggle.astro'
 ---
 <style>
     @tailwind base;
@@ -14,10 +15,6 @@ import { ViewTransitions } from "astro:transitions";
       document.querySelectorAll(".softwareEng")[0].addEventListener("click", () => {
         navigate("/software-engineer");
       }, { once: true });
-      document.querySelectorAll(".dayNight")[0].addEventListener("click", () => {
-        let page = document.querySelectorAll(".page")[0];
-        page.classList.contains("dark")?page.classList.remove("dark"):page.classList.add("dark");
-      });
     }
   });
 </script>
@@ -25,10 +22,7 @@ import { ViewTransitions } from "astro:transitions";
   <div
     class="w-full h-screen dark:bg-[url('/landing.svg')] bg-[url('/landing-light.svg')] bg-cover bg-right-bottom min-h-screen flex flex-col justify-start items-center">
     <div class="flex flex-row w-full h-20 justify-end items-start p-4">
-      <div class="dayNight">
-        <i class="iconoir-half-moon before:size-8 before:text-regal-blue-100 inline-flex dark:hidden"></i>
-        <i class="hidden dark:inline-flex iconoir-sun-light before:size-8 before:text-regal-blue-100"></i>
-      </div>
+      <DayNightToggle></DayNightToggle>
     </div>
     <div class="flex flex-col lg:flex-row justify-start items-center w-3/5 max-w-screen-sm">
       <div class="w-full">
