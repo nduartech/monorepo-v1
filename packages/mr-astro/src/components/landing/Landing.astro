@@ -14,13 +14,23 @@ import { ViewTransitions } from "astro:transitions";
       document.querySelectorAll(".softwareEng")[0].addEventListener("click", () => {
         navigate("/software-engineer");
       }, { once: true });
+      document.querySelectorAll(".dayNight")[0].addEventListener("click", () => {
+        let page = document.querySelectorAll(".page")[0];
+        page.classList.contains("dark")?page.classList.remove("dark"):page.classList.add("dark");
+      });
     }
   });
 </script>
-<div class="w-screen h-screen flex">
+<div class="w-screen h-screen flex page">
   <div
-    class="w-full h-screen dark:bg-[url('/landing.svg')] bg-[url('/landing-light.svg')] bg-cover bg-right-bottom min-h-screen flex flex-row justify-center items-start">
-    <div class="flex flex-col lg:flex-row justify-center items-center mt-16 md:mt-24 lg:mt-36">
+    class="w-full h-screen dark:bg-[url('/landing.svg')] bg-[url('/landing-light.svg')] bg-cover bg-right-bottom min-h-screen flex flex-col justify-start items-center">
+    <div class="flex flex-row w-full h-20 justify-end items-start p-4">
+      <div class="dayNight">
+        <i class="iconoir-half-moon before:size-8 before:text-regal-blue-100 inline-flex dark:hidden"></i>
+        <i class="hidden dark:inline-flex iconoir-sun-light before:size-8 before:text-regal-blue-100"></i>
+      </div>
+    </div>
+    <div class="flex flex-col lg:flex-row justify-start items-center w-3/5 max-w-screen-sm">
       <div class="w-full">
         <div class="flex flex-row justify-center items-center lg:flex-col w-full space-x-5 my-5 lg:space-x-0 lg:space-y-2 text-center">
           <div class="image-container w-2/12 min-w-36 max-w-48 h-2/12 flex justify-center items-center">
@@ -32,15 +42,15 @@ import { ViewTransitions } from "astro:transitions";
       <div class="w-4/5 lg:w-full">
         <div class="space-y-2.5">
           <button type="button"
-                  class="softwareEng bg-regal-blue-600 hover:bg-regal-blue-500 dark:bg-regal-blue-800 dark:hover:bg-regal-blue-900 w-full py-2 px-2 text-sm font-medium text-white border border-transparent rounded-lg focus:outline-none hover:outline hover:outline-1 hover:outline-offset-1 hover:outline-regal-blue-200">
+                  class="softwareEng bg-regal-blue-500 hover:bg-regal-blue-400 dark:bg-regal-blue-800 dark:hover:bg-regal-blue-900 w-full py-2 px-2 text-sm font-medium text-white border border-transparent rounded-lg focus:outline-none hover:outline hover:outline-1 hover:outline-offset-1 hover:outline-regal-blue-200">
             Full Stack Software Engineer
           </button>
           <button
-            class="bg-regal-blue-600 hover:bg-regal-blue-500 dark:bg-regal-blue-800 dark:hover:bg-regal-blue-900 w-full py-2 px-2 text-sm font-medium text-white border border-transparent rounded-lg focus:outline-none hover:outline hover:outline-1 hover:outline-offset-1 hover:outline-regal-blue-200">
+            class="bg-regal-blue-500 hover:bg-regal-blue-400 dark:bg-regal-blue-800 dark:hover:bg-regal-blue-900 w-full py-2 px-2 text-sm font-medium text-white border border-transparent rounded-lg focus:outline-none hover:outline hover:outline-1 hover:outline-offset-1 hover:outline-regal-blue-200">
             Proliferate Reader
           </button>
           <button
-            class="bg-regal-blue-600 hover:bg-regal-blue-500 dark:bg-regal-blue-800 dark:hover:bg-regal-blue-900 w-full py-2 px-2 text-sm font-medium text-white border border-transparent rounded-lg focus:outline-none hover:outline hover:outline-1 hover:outline-offset-1 hover:outline-regal-blue-200">
+            class="bg-regal-blue-500 hover:bg-regal-blue-400 dark:bg-regal-blue-800 dark:hover:bg-regal-blue-900 w-full py-2 px-2 text-sm font-medium text-white border border-transparent rounded-lg focus:outline-none hover:outline hover:outline-1 hover:outline-offset-1 hover:outline-regal-blue-200">
             Proud Husband and Father
           </button>
         </div>
