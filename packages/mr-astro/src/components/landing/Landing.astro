@@ -35,27 +35,30 @@ import mePng from '../../../public/me.png';
     <div class="flex flex-row w-full h-20 justify-end items-start p-4">
       <DayNightToggle></DayNightToggle>
     </div>
-    <div class="flex flex-col lg:flex-row justify-start items-center w-3/5 lg:space-x-10">
-      <div class="w-full max-w-screen-sm">
+    <div class="flex flex-col lg:flex-row justify-start items-center w-3/5 lg:space-x-10 space-y-10 md:space-y-5 lg:space-y-0">
+      <div class="w-full max-w-screen-sm min-w-fit bg-[rgba(_0,_0,_0,_0.55_)] [box-shadow:0_8px_32px_0_rgba(_31,_38,_135,_0.37_)] backdrop-filter backdrop-blur-[2px] rounded-[10px] border-[1px] border-[solid] border-[rgba(255,255,255,0.18)]
+       dark:bg-[rgba(_0,_0,_0,_0.7_)] dark:[box-shadow:0_8px_32px_0_rgba(_31,_38,_135,_0.37_)] dark:backdrop-filter dark:backdrop-blur-[14.5px] dark:rounded-[10px] dark:border-[1px] dark:border-[solid] dark:border-[rgba(255,255,255,0.18)] px-5">
         <div class="flex flex-row justify-center items-center lg:flex-col w-full space-x-5 my-5 lg:space-x-0 lg:space-y-2 text-center">
           <div class="image-container w-2/12 min-w-36 max-w-48 h-2/12 flex justify-center items-center">
             <Image class="rounded-full object-fill p-3" src={mePng} alt="Nathan" />
           </div>
-          <p class="text-5xl dark:text-regal-blue-100 text-regal-blue-100 my-2 text-center">Hi, I'm Nathan.</p>
+          <p class="text-3xl md:text-4xl dark:text-regal-blue-100 text-regal-blue-50 my-2 text-center">Hi, I'm Nathan.</p>
         </div>
       </div>
-      <div class="w-full max-w-screen-md">
-        <div class="space-y-2.5">
+      <!--dark:bg-[rgba(_255,_255,_255,_0.55_)] dark:[box-shadow:0_8px_32px_0_rgba(_31,_38,_135,_0.37_)] dark:backdrop-filter dark:backdrop-blur-[2px] dark:rounded-[10px] dark:border-[1px] dark:border-[solid] dark:border-[rgba(255,255,255,0.18)]-->
+      <div class="w-full max-w-screen-sm h-full flex flex-col justify-center items-center bg-[rgba(_0,_0,_0,_0.55_)] [box-shadow:0_8px_32px_0_rgba(_31,_38,_135,_0.37_)] backdrop-filter backdrop-blur-[2px] rounded-[10px] border-[1px] border-[solid] border-[rgba(255,255,255,0.18)]
+        dark:bg-[rgba(_0,_0,_0,_0.7_)] dark:[box-shadow:0_8px_32px_0_rgba(_31,_38,_135,_0.37_)] dark:backdrop-filter dark:backdrop-blur-[14.5px] dark:rounded-[10px] dark:border-[1px] dark:border-[solid] dark:border-[rgba(255,255,255,0.18)] px-5">
+        <div class="space-y-2.5 w-11/12 flex flex-col justify-center items-center py-10 md:py-5 lg:py-0">
           <button type="button"
-                  class="softwareEng bg-regal-blue-500 hover:bg-regal-blue-400 dark:bg-regal-blue-800 dark:hover:bg-regal-blue-900 w-full py-2 px-2 text-sm font-medium text-white border border-transparent rounded-lg focus:outline-none hover:outline hover:outline-1 hover:outline-offset-1 hover:outline-regal-blue-200">
+                  class="softwareEng bg-regal-blue-600 hover:bg-regal-blue-500 dark:bg-regal-blue-800 dark:hover:bg-regal-blue-900 w-full py-2 px-2 text-sm font-medium text-regal-blue-50 dark:text-regal-blue-50 border border-transparent rounded-lg focus:outline-none hover:outline hover:outline-1 hover:outline-offset-1 hover:outline-regal-blue-200">
             Full Stack Software Engineer
           </button>
           <button
-            class="bg-regal-blue-500 hover:bg-regal-blue-400 dark:bg-regal-blue-800 dark:hover:bg-regal-blue-900 w-full py-2 px-2 text-sm font-medium text-white border border-transparent rounded-lg focus:outline-none hover:outline hover:outline-1 hover:outline-offset-1 hover:outline-regal-blue-200">
+            class="bg-regal-blue-600 hover:bg-regal-blue-500 dark:bg-regal-blue-800 dark:hover:bg-regal-blue-900 w-full py-2 px-2 text-sm font-medium text-regal-blue-50 dark:text-regal-blue-50 border border-transparent rounded-lg focus:outline-none hover:outline hover:outline-1 hover:outline-offset-1 hover:outline-regal-blue-200">
             Proliferate Reader
           </button>
           <button
-            class="bg-regal-blue-500 hover:bg-regal-blue-400 dark:bg-regal-blue-800 dark:hover:bg-regal-blue-900 w-full py-2 px-2 text-sm font-medium text-white border border-transparent rounded-lg focus:outline-none hover:outline hover:outline-1 hover:outline-offset-1 hover:outline-regal-blue-200">
+            class="bg-regal-blue-600 hover:bg-regal-blue-500 dark:bg-regal-blue-800 dark:hover:bg-regal-blue-900 w-full py-2 px-2 text-sm font-medium text-regal-blue-50 dark:text-regal-blue-50 border border-transparent rounded-lg focus:outline-none hover:outline hover:outline-1 hover:outline-offset-1 hover:outline-regal-blue-200">
             Proud Husband and Father
           </button>
         </div>
