@@ -1,11 +1,31 @@
 ---
 
 ---
-<script >
-  document.addEventListener("astro:page-load", () => {
+<script>
+  const eventClicked = () => {
+    let page = document.documentElement;
+    page.classList.contains("dark") ? page.classList.remove("dark") : page.classList.add("dark");
+    window.localStorage.setItem("theme", window.localStorage.getItem("theme") === "light" ? "dark" : "light");
+    let dayNightSun = document.querySelector(".sun");
+    let dayNightMoon = document.querySelector(".moon");
+    if (window.localStorage.getItem("theme") === "light") {
+      dayNightSun.setAttribute("class","sun hidden");
+      dayNightMoon.setAttribute("class", "moon inline-flex");
+    } else {
+      dayNightSun.setAttribute("class","sun inline-flex");
+      dayNightMoon.setAttribute("class", "moon hidden");
+    }
+  };
+
+  let dayNightButton = null;
+
+  const pageLoaded = () => {
+
     const theme = (() => {
-      if (typeof window.localStorage !== "undefined" && window.localStorage.getItem("theme")) {
+      if (typeof window.localStorage && window.localStorage.getItem("theme")) {
         return window.localStorage.getItem("theme");
+      } else if (document.documentElement.dataset.theme) {
+        return document.documentElement.dataset.theme;
       }
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         return "dark";
@@ -14,20 +34,42 @@
     })();
 
     if (theme === "light") {
-      document.documentElement.classList.remove("dark");
+      if (document.documentElement.classList.contains("dark")) {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.dataset.theme = 'light';
+      }
     } else {
-      document.documentElement.classList.add("dark");
+      if (!document.documentElement.classList.contains("dark")) {
+        document.documentElement.classList.add("dark");
+        document.documentElement.dataset.theme = 'dark';
+      }
     }
     window.localStorage.setItem("theme", theme);
+    if (window.location.pathname === "/") {
+      dayNightButton = document.querySelector(".dayNight");
+      let dayNightSun = document.querySelector(".sun");
+      let dayNightMoon = document.querySelector(".moon");
+      if (theme === "light") {
+        dayNightSun.setAttribute("class","sun hidden");
+        dayNightMoon.setAttribute("class", "moon inline-flex");
+      } else {
+        dayNightSun.setAttribute("class","sun inline-flex");
+        dayNightMoon.setAttribute("class", "moon hidden");
+      }
 
-    document.querySelectorAll(".dayNight")[0].addEventListener("click", () => {
-      let page = document.documentElement;
-      page.classList.contains("dark") ? page.classList.remove("dark") : page.classList.add("dark");
-      window.localStorage.setItem("theme", window.localStorage.getItem("theme") === "light" ? "dark" : "light");
-    });
+      dayNightButton.addEventListener("click", eventClicked);
+    }
+  };
+
+  document.addEventListener("astro:page-load", pageLoaded);
+  document.addEventListener("astro:before-preparation", () => {
+    if (window.location.pathname === "/") {
+      dayNightButton && dayNightButton.removeEventListener("click", eventClicked);
+      dayNightButton = null;
+    }
   });
 </script>
 <div class="dayNight">
-  <i class="iconoir-half-moon before:size-8 before:text-regal-blue-100 inline-flex dark:hidden"></i>
-  <i class="hidden dark:inline-flex iconoir-sun-light before:size-8 before:text-regal-blue-100"></i>
+  <div class="sun"><i class="iconoir-half-moon before:size-8 before:text-regal-blue-100"></i></div>
+  <div class="moon"><i class="iconoir-sun-light before:size-8 before:text-regal-blue-100"></i></div>
 </div>

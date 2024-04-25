@@ -1,6 +1,8 @@
 ---
 import { ViewTransitions } from "astro:transitions";
+import { Image } from "astro:assets";
 import DayNightToggle  from '../common/DayNightToggle.astro'
+import mePng from '../../../public/me.png';
 ---
 <style>
     @tailwind base;
@@ -9,12 +11,21 @@ import DayNightToggle  from '../common/DayNightToggle.astro'
 </style>
 <script>
   import { navigate } from "astro:transitions/client";
-
+  const seListener = () => {
+    navigate("/software-engineer");
+  };
+  let seButton = null;
   document.addEventListener("astro:page-load", () => {
     if (window.location.pathname === "/") {
-      document.querySelectorAll(".softwareEng")[0].addEventListener("click", () => {
-        navigate("/software-engineer");
-      }, { once: true });
+      seButton = document.querySelector(".softwareEng");
+      seButton.addEventListener("click",seListener );
+    }
+  });
+  document.addEventListener("astro:before-swap", ()=>{
+    if (window.location.pathname === "/") {
+      if(seButton) {
+        seButton.removeEventListener("click", seListener);
+      }
     }
   });
 </script>
@@ -28,7 +39,7 @@ import DayNightToggle  from '../common/DayNightToggle.astro'
       <div class="w-full">
         <div class="flex flex-row justify-center items-center lg:flex-col w-full space-x-5 my-5 lg:space-x-0 lg:space-y-2 text-center">
           <div class="image-container w-2/12 min-w-36 max-w-48 h-2/12 flex justify-center items-center">
-            <img class="rounded-full object-fill p-3" src="/me.png" alt="Nathan" />
+            <Image class="rounded-full object-fill p-3" src={mePng} alt="Nathan" />
           </div>
           <p class="text-3xl dark:text-regal-blue-100 text-regal-blue-100 font-semibold my-2 font-mono text-center">Hi. I'm Nathan.</p>
         </div>

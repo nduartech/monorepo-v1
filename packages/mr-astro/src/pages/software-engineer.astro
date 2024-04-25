@@ -3,24 +3,45 @@ import Layout from '../layouts/Layout.astro';
 import SE from "../components/se/SE.tsx";
 ---
 <script >
-  document.addEventListener("astro:page-load", () => {
-    const theme = (() => {
-      if (typeof window.localStorage !== "undefined" && window.localStorage.getItem("theme")) {
-        return window.localStorage.getItem("theme");
-      }
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        return "dark";
-      }
-      return "light";
-    })();
+  import { navigate } from "astro:transitions/client";
 
-    if (theme === "light") {
-      document.documentElement.classList.remove("dark");
-    } else {
-      document.documentElement.classList.add("dark");
-    }
-    window.localStorage.setItem("theme", theme);
-  });
+  if (window.location.pathname === "/software-engineer") {
+    let navState = false;
+    const navClicked = ($event) => {
+      if ($event.currentTarget.getAttribute("data-path")) {
+        if ($event.currentTarget.getAttribute("data-path") === "home") {
+          navigate("/");
+        } else {
+          navigate($event.currentTarget.getAttribute("data-path"));
+        }
+      }
+    };
+    let buttons = [];
+    const navOpen = () => {
+      document.querySelectorAll(".navButton").forEach((button) => {
+        button.addEventListener("click", navClicked);
+        buttons = [...buttons, button];
+      });
+      navState = true;
+    };
+    const navClosed = () => {
+      buttons.forEach((button) => {
+        button.removeEventListener("click", navClicked);
+      });
+      navState = false;
+    };
+    document.addEventListener("navOpened", navOpen);
+    document.addEventListener("navClosed", navClosed);
+    document.addEventListener('astro:before-swap', () => {
+      if(buttons.length > 0) {
+        buttons.forEach((button) => {
+          button.removeEventListener("click", navClicked);
+        });
+        navState = false;
+      }
+    });
+  }
+
 </script>
 <Layout title="Hi. I'm Nathan.">
 	<main>
