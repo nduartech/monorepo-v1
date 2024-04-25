@@ -18,7 +18,7 @@ function Nav(props: any) {
   }
 
   return (
-    <div class="flex flex-row items-start justify-start w-fit h-fit fixed float-start mt-2 ml-2">
+    <div class="flex flex-row items-start justify-start w-fit h-fit fixed float-start mt-2 ml-2 bg-regal-blue-600 hover:bg-regal-blue-500 dark:bg-regal-blue-800 dark:hover:bg-regal-blue-900 rounded">
       <div class="flex flex-col items-start justify-start w-fit h-fit navDiv">
         <Show when={closed()}>
           <NavButton icon="menu" label="Menu" onClick={()=>{
