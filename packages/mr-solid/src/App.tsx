@@ -19,11 +19,13 @@ const App: Component = (props: any) => {
       <div class="h-screen w-screen bg-regal-blue-400 dark:bg-regal-blue-950">
         <Nav navItems={nav()}></Nav>
         <div class="page flex flex-col justify-center items-center h-screen w-screen">
-          <h2 class="text-5xl text-black dark:text-white">Sample App</h2>
-          <p class="text-black dark:text-white mt-5 mb-2">Build on this...</p>
-          <button class="bg-regal-blue-800 text-white text-sm hover:bg-regal-blue-500 py-2 px-4 mt-3 rounded">Learn
+          <div class="flex flex-col justify-center items-center">
+          <h2 class="text-5xl text-white dark:text-white">Sample App</h2>
+          <p class="text-white dark:text-white mt-5 mb-2">Build on this...</p>
+          <button class="flex flex-row space-x-2 items-center justify-center bg-regal-blue-600 hover:bg-regal-blue-500 dark:bg-regal-blue-800 dark:hover:bg-regal-blue-900 w-full py-2 px-2 text-sm font-medium text-regal-blue-50 dark:text-regal-blue-50 border border-transparent rounded-lg focus:outline-none hover:outline hover:outline-1 hover:outline-offset-1 hover:outline-regal-blue-200">Learn
             More
           </button>
+          </div>
         </div>
       </div>
     </div>

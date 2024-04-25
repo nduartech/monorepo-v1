@@ -1,7 +1,6 @@
 function NavButton(props:any) {
   return (
-    <div class="navButton text-regal-blue-100 text-sm flex flex-row items-center justify-center
-    space-x-2  pl-1.5 pr-2.5 py-1.5 bg-regal-blue-800 rounded" data-path={props.path} onClick={props.onClick} >
+    <div class="navButton flex flex-row space-x-2 items-center justify-center bg-regal-blue-600 hover:bg-regal-blue-500 dark:bg-regal-blue-800 dark:hover:bg-regal-blue-900 w-full py-2 px-2 text-sm font-medium text-regal-blue-50 dark:text-regal-blue-50 border border-transparent rounded-lg focus:outline-none hover:outline hover:outline-1 hover:outline-offset-1 hover:outline-regal-blue-200" data-path={props.path} onClick={props.onClick} >
       <i class={"iconoir-"+props.icon+" before:size-6 before:text-regal-blue-100 inline-flex"}>
       </i>
       <p class="navIconLabel">{props.label}</p>
