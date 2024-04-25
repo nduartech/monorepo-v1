@@ -31,20 +31,20 @@ import mePng from '../../../public/me.png';
 </script>
 <div class="w-screen h-screen flex page">
   <div
-    class="w-full h-screen dark:bg-[url('/landing.svg')] bg-[url('/landing-light.svg')] bg-cover bg-right-bottom min-h-screen flex flex-col justify-start items-center">
+    class="w-full h-screen dark:bg-[url('/landing.svg')] bg-[url('/landing-light.svg')] bg-cover bg-bottom min-h-screen flex flex-col justify-start items-center">
     <div class="flex flex-row w-full h-20 justify-end items-start p-4">
       <DayNightToggle></DayNightToggle>
     </div>
-    <div class="flex flex-col lg:flex-row justify-start items-center w-3/5 max-w-screen-sm">
-      <div class="w-full">
+    <div class="flex flex-col lg:flex-row justify-start items-center w-3/5 lg:space-x-10">
+      <div class="w-full max-w-screen-sm">
         <div class="flex flex-row justify-center items-center lg:flex-col w-full space-x-5 my-5 lg:space-x-0 lg:space-y-2 text-center">
           <div class="image-container w-2/12 min-w-36 max-w-48 h-2/12 flex justify-center items-center">
             <Image class="rounded-full object-fill p-3" src={mePng} alt="Nathan" />
           </div>
-          <p class="text-3xl dark:text-regal-blue-100 text-regal-blue-100 font-semibold my-2 font-mono text-center">Hi. I'm Nathan.</p>
+          <p class="text-5xl dark:text-regal-blue-100 text-regal-blue-100 my-2 text-center">Hi, I'm Nathan.</p>
         </div>
       </div>
-      <div class="w-4/5 lg:w-full">
+      <div class="w-full max-w-screen-md">
         <div class="space-y-2.5">
           <button type="button"
                   class="softwareEng bg-regal-blue-500 hover:bg-regal-blue-400 dark:bg-regal-blue-800 dark:hover:bg-regal-blue-900 w-full py-2 px-2 text-sm font-medium text-white border border-transparent rounded-lg focus:outline-none hover:outline hover:outline-1 hover:outline-offset-1 hover:outline-regal-blue-200">
