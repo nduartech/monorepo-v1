@@ -1,8 +1,9 @@
 import { Component, For } from "solid-js";
 import "./index.css";
 import Nav from "./components/Nav";
-import SkillButton from "./components/SkillButton";
+import SkillBar from './components/SkillBar';
 import skillFilters from "./components/SkillFilters";
+import Xp from "./components/Xp";
 
 const App: Component = (props: any) => {
 
@@ -143,36 +144,11 @@ const App: Component = (props: any) => {
         <Nav navItems={nav()}></Nav>
         <div class="page flex flex-row justify-center">
           <div class="page flex flex-row justify-center items-center fixed w-10/12">
-            <div class="rounded-t-none w-[60vw] min-h-[5rem] h-fit bg-[rgba(_0,_0,_0,_0.55_)] [box-shadow:0_8px_32px_0_rgba(_31,_38,_135,_0.37_)]
-        backdrop-filter backdrop-blur-[2px] rounded-[10px] border-[1px] border-[solid] border-[rgba(255,255,255,0.18)]
-        dark:bg-[rgba(_0,_0,_0,_0.7_)] dark:[box-shadow:0_8px_32px_0_rgba(_31,_38,_135,_0.37_)] dark:backdrop-filter
-        dark:backdrop-blur-[14.5px] dark:rounded-[10px] dark:border-[1px] dark:border-[solid] dark:border-[rgba(255,255,255,0.18)]
-        flex flex-row justify-start items-center px-0 md:px-5 lg:px-10">
-              <div class="w-12/12 h-11/12 flex flex-row flex-wrap py-2 justify-center items-center"
-                // no-scrollbar scroll-smooth
-                // " onWheel={(event)=> {
-                //   event.preventDefault();
-                //   event.currentTarget.scroll(scrollPosition + event.deltaX > 0 ? event.deltaX : event.deltaY, 0);
-                // }}
-              >
-                <For each={skills()}>
-                  {(item, index) => (
-                    <SkillButton label={item.label} skill={item.skill} category={item.category}
-                                 link={item.link}></SkillButton>
-                  )}
-                </For>
-              </div>
-            </div>
+              <SkillBar skills={skills()}></SkillBar>
           </div>
           <div class="page flex flex-col justify-start items-center h-screen w-screen">
-            <div class="flex flex-col justify-center mt-[20rem] md:mt-[15rem] items-center bg-[rgba(_0,_0,_0,_0.55_)] [box-shadow:0_8px_32px_0_rgba(_31,_38,_135,_0.37_)] backdrop-filter backdrop-blur-[2px] rounded-[10px] border-[1px] border-[solid] border-[rgba(255,255,255,0.18)]
-        dark:bg-[rgba(_0,_0,_0,_0.7_)] dark:[box-shadow:0_8px_32px_0_rgba(_31,_38,_135,_0.37_)] dark:backdrop-filter dark:backdrop-blur-[14.5px] dark:rounded-[10px] dark:border-[1px] dark:border-[solid] dark:border-[rgba(255,255,255,0.18)] p-10 md:p-20 lg:p-32">
-              <h2 class="text-5xl text-white dark:text-white">Sample App</h2>
-              <p class="text-white dark:text-white mt-5 mb-2">Build on this...</p>
-              <button
-                class="flex flex-row space-x-2 items-center justify-center bg-regal-blue-600 hover:bg-regal-blue-500 dark:bg-regal-blue-800 dark:hover:bg-regal-blue-900 w-full py-2 px-2 text-sm font-medium text-regal-blue-50 dark:text-regal-blue-50 border border-transparent rounded-lg focus:outline-none hover:outline hover:outline-1 hover:outline-offset-1 hover:outline-regal-blue-200">Learn
-                More
-              </button>
+            <div class="flex flex-col md:flex-row justify-center items-center mt-[5rem] md:mt-[15rem] lg:mt-[12rem] bg-[rgba(_0,_0,_0,_0.55_)] [box-shadow:0_8px_32px_0_rgba(_31,_38,_135,_0.37_)] backdrop-filter backdrop-blur-[2px] rounded-[10px] border-[1px] border-[solid] border-[rgba(255,255,255,0.18)] dark:bg-[rgba(_0,_0,_0,_0.7_)] dark:[box-shadow:0_8px_32px_0_rgba(_31,_38,_135,_0.37_)] dark:backdrop-filter dark:backdrop-blur-[14.5px] dark:rounded-[10px] dark:border-[1px] dark:border-[solid] dark:border-[rgba(255,255,255,0.18)] p-10 w-[80vw] h-[80vh] md:h-[50vh] lg:h-[65vh] min-h-fit">
+              <Xp></Xp>
             </div>
           </div>
         </div>
