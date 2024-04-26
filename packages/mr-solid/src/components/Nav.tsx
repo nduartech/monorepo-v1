@@ -1,39 +1,50 @@
-import { createSignal, For, Show } from "solid-js";
+import { Show, For, createSignal } from "solid-js";
+
 import NavButton from "./NavButton";
 
 function Nav(props: any) {
-
-  const [closed, setClosed] = createSignal(true);
-
-  const emitClosedState = () => {
-    let navClosed = new Event("navClosed");
-    let navOpened = new Event("navOpened");
-
-    if(!closed()) {
-      document.dispatchEvent(navOpened);
-    }
-    if(closed()){
-      document.dispatchEvent(navClosed);
-    }
-  }
+  const [isClosed, setIsClosed] = createSignal(true);
 
   return (
     <div class="flex flex-row items-start justify-start w-fit h-fit fixed float-start mt-2 ml-2">
       <div class="flex flex-col items-start justify-start w-fit h-fit navDiv">
-        <Show when={closed()}>
-          <NavButton icon="menu" label="Menu" onClick={()=>{
-            setClosed(false);
-            emitClosedState();
-          }}></NavButton>
+        <Show when={isClosed()}>
+          <NavButton
+            icon="menu"
+            label="Menu"
+            onClick={()=> {
+              setIsClosed(false);
+              let navClosed = new Event("navClosed");
+              let navOpened = new Event("navOpened");
+              if (!isClosed()) {
+                document.dispatchEvent(navOpened);
+              }
+              if (isClosed()) {
+                document.dispatchEvent(navClosed);
+              }
+            }}
+          ></NavButton>
         </Show>
         <ul class="flex flex-col items-start justify-start w-fit h-fit space-y-1.5 list-none">
-          <Show when={!closed()}>
-            <NavButton icon="web-window-xmark" label="Close" onClick={()=>{
-              setClosed(true);
-              emitClosedState();
-            }}></NavButton>
+          <Show when={!isClosed()}>
+            <NavButton
+              icon="web-window-xmark"
+              label="Close"
+              onClick={()=> {
+                setIsClosed(true);
+                let navClosed = new Event("navClosed");
+                let navOpened = new Event("navOpened");
+                if (!isClosed()) {
+                  document.dispatchEvent(navOpened);
+                }
+                if (isClosed()) {
+                  document.dispatchEvent(navClosed);
+                }
+              }}
+            ></NavButton>
             <For each={props.navItems}>
-              {(item: any, index) => {
+              {(item, _index) => {
+                const index = _index();
                 return (
                   <NavButton
                     icon={item.icon}
