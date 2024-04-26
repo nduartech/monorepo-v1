@@ -6,18 +6,20 @@
     let page = document.documentElement;
     page.classList.contains("dark") ? page.classList.remove("dark") : page.classList.add("dark");
     window.localStorage.setItem("theme", window.localStorage.getItem("theme") === "light" ? "dark" : "light");
-    let dayNightSun = document.querySelector(".sun");
-    let dayNightMoon = document.querySelector(".moon");
-    if (window.localStorage.getItem("theme") === "light") {
-      dayNightSun.setAttribute("class","sun hidden");
+    dayNightSun = document.querySelector(".sun");
+    dayNightMoon = document.querySelector(".moon");
+    if (window.localStorage.getItem("theme") === "light" && dayNightMoon !== null && dayNightSun !== null) {
+      dayNightSun.setAttribute("class", "sun hidden");
       dayNightMoon.setAttribute("class", "moon inline-flex");
-    } else {
-      dayNightSun.setAttribute("class","sun inline-flex");
+    } else if (window.localStorage.getItem("theme") === "dark" && dayNightMoon !== null && dayNightSun !== null) {
+      dayNightSun.setAttribute("class", "sun inline-flex");
       dayNightMoon.setAttribute("class", "moon hidden");
     }
   };
 
-  let dayNightButton = null;
+  let dayNightButton:any = null;
+  let dayNightSun:any = null;
+  let dayNightMoon:any = null;
 
   const pageLoaded = () => {
 
@@ -37,22 +39,23 @@
       if (document.documentElement.classList.contains("dark")) {
         document.documentElement.classList.remove("dark");
         document.documentElement.dataset.theme = 'light';
+        window.localStorage.setItem("theme", theme);
       }
-    } else {
+    } else if (theme === "dark") {
       if (!document.documentElement.classList.contains("dark")) {
         document.documentElement.classList.add("dark");
         document.documentElement.dataset.theme = 'dark';
+        window.localStorage.setItem("theme", theme);
       }
     }
-    window.localStorage.setItem("theme", theme);
     if (window.location.pathname === "/") {
       dayNightButton = document.querySelector(".dayNight");
-      let dayNightSun = document.querySelector(".sun");
-      let dayNightMoon = document.querySelector(".moon");
-      if (theme === "light") {
+      dayNightSun = document.querySelector(".sun");
+      dayNightMoon = document.querySelector(".moon");
+      if (theme === "light" && dayNightMoon !== null && dayNightSun !== null) {
         dayNightSun.setAttribute("class","sun hidden");
         dayNightMoon.setAttribute("class", "moon inline-flex");
-      } else {
+      } else if (theme === "dark" && dayNightMoon !== null && dayNightSun !== null) {
         dayNightSun.setAttribute("class","sun inline-flex");
         dayNightMoon.setAttribute("class", "moon hidden");
       }

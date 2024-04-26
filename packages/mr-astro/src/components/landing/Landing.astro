@@ -14,11 +14,13 @@ import mePng from '../../../public/me.png';
   const seListener = () => {
     navigate("/software-engineer");
   };
-  let seButton = null;
+  let seButton:any = null;
   document.addEventListener("astro:page-load", () => {
     if (window.location.pathname === "/") {
       seButton = document.querySelector(".softwareEng");
-      seButton.addEventListener("click",seListener );
+      if(seButton!==null) {
+        seButton.addEventListener("click", seListener);
+      }
     }
   });
   document.addEventListener("astro:before-swap", ()=>{

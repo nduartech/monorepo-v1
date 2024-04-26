@@ -7,7 +7,7 @@ import SE from "../components/se/SE.tsx";
 
   if (window.location.pathname === "/software-engineer") {
     let navState = false;
-    const navClicked = ($event) => {
+    const navClicked = ($event: any) => {
       if ($event.currentTarget.getAttribute("data-path")) {
         if ($event.currentTarget.getAttribute("data-path") === "home") {
           navigate("/");
@@ -16,16 +16,16 @@ import SE from "../components/se/SE.tsx";
         }
       }
     };
-    let buttons = [];
+    let buttons:any = [];
     const navOpen = () => {
-      document.querySelectorAll(".navButton").forEach((button) => {
+      document.querySelectorAll(".navButton").forEach((button: any) => {
         button.addEventListener("click", navClicked);
         buttons = [...buttons, button];
       });
       navState = true;
     };
     const navClosed = () => {
-      buttons.forEach((button) => {
+      buttons.forEach((button: any) => {
         button.removeEventListener("click", navClicked);
       });
       navState = false;
@@ -34,7 +34,7 @@ import SE from "../components/se/SE.tsx";
     document.addEventListener("navClosed", navClosed);
     document.addEventListener('astro:before-swap', () => {
       if(buttons.length > 0) {
-        buttons.forEach((button) => {
+        buttons.forEach((button: any) => {
           button.removeEventListener("click", navClicked);
         });
         navState = false;
