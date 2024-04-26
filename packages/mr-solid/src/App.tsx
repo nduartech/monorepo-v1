@@ -29,6 +29,36 @@ const App: Component = (props: any) => {
       link: ""
     },
     {
+      label: "Typescript",
+      skill: "ts",
+      category: "front-end",
+      link: ""
+    },
+    {
+      label: "Java",
+      skill: "java",
+      category: "back-end",
+      link: ""
+    },
+    {
+      label: "Python",
+      skill: "python",
+      category: "back-end",
+      link: "https://www.python.org/"
+    },
+    {
+      label: "Golang",
+      skill: "golang",
+      category: "back-end",
+      link: "https://go.dev/"
+    },
+    {
+      label: "SQL",
+      skill: "sql",
+      category: "back-end",
+      link: ""
+    },
+    {
       label: "Tailwind",
       skill: "tailwindcss",
       category: "front-end",
@@ -36,28 +66,70 @@ const App: Component = (props: any) => {
     },
     {
       label: "SolidJS",
-      skill: "solidjs",
+      skill: "solidjs,ts",
       category: "front-end",
       link: "https://www.solidjs.com/"
     },
     {
       label: "Astro",
-      skill: "astrojs",
+      skill: "astrojs,ts",
       category: "front-end",
       link: "https://astro.build/"
     },
     {
       label: "Angular",
-      skill: "angularjs",
+      skill: "angularjs,ts",
       category: "front-end",
       link: "https://angular.io/"
     },
     {
       label: "Mitosis",
-      skill: "mitosisjs",
+      skill: "mitosisjs,ts",
       category: "front-end",
       link: "https://mitosis.builder.io/"
-    }
+    },
+    {
+      label: "Spring Boot (2/3)",
+      skill: "spring-boot,java",
+      category: "back-end",
+      link: "https://spring.io/projects/spring-boot"
+    },
+    {
+      label: "Spring Integration",
+      skill: "spring-integration,java",
+      category: "back-end",
+      link: "https://spring.io/projects/spring-integration"
+    },
+    {
+      label: "Spring Cloud",
+      skill: "spring-cloud,java",
+      category: "back-end",
+      link: "https://spring.io/projects/spring-cloud"
+    },
+    {
+      label: "Spring Security",
+      skill: "spring-security,java",
+      category: "back-end",
+      link: "https://spring.io/projects/spring-security"
+    },
+    {
+      label: "YAVI",
+      skill: "yavi,java",
+      category: "back-end",
+      link: "https://yavi.ik.am/"
+    },
+    {
+      label: "MongoDB",
+      skill: "mongo",
+      category: "back-end",
+      link: "https://www.mongodb.com/"
+    },
+    {
+      label: "PostgreSQL",
+      skill: "postgresql",
+      category: "back-end",
+      link: "https://www.postgresql.org/"
+    },
   ];
 
   const [filters, setFilters] = skillFilters;
@@ -76,7 +148,7 @@ const App: Component = (props: any) => {
         dark:bg-[rgba(_0,_0,_0,_0.7_)] dark:[box-shadow:0_8px_32px_0_rgba(_31,_38,_135,_0.37_)] dark:backdrop-filter
         dark:backdrop-blur-[14.5px] dark:rounded-[10px] dark:border-[1px] dark:border-[solid] dark:border-[rgba(255,255,255,0.18)]
         flex flex-row justify-start items-center px-0 md:px-5 lg:px-10">
-              <div class="w-12/12 h-11/12 flex flex-row flex-wrap py-2"
+              <div class="w-12/12 h-11/12 flex flex-row flex-wrap py-2 justify-center items-center"
                 // no-scrollbar scroll-smooth
                 // " onWheel={(event)=> {
                 //   event.preventDefault();
