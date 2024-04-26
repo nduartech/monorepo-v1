@@ -14,7 +14,7 @@ function SkillButton(props: { category: string; skill: string; link: string | UR
     <>
       <div
         class={"skillButton min-w-fit flex flex-row space-x-1.5 items-center justify-center" +
-          " py-2 mx-2 my-1 px-1 text-sm font-medium text-regal-blue-50 dark:text-regal-blue-50 border border-transparent " +
+          " py-1 mx-2 my-1 px-1.5 text-sm font-medium text-regal-blue-50 dark:text-regal-blue-50 border border-transparent " +
           "rounded-lg "+(props.category==="front-end"?
             filterButton(filters(),props.skill)?"bg-green-600 dark:bg-green-700":"bg-green-800 dark:bg-green-900"
             :"")}
