@@ -165,7 +165,7 @@ const App: Component = (props: any) => {
             </div>
           </div>
           <div class="page flex flex-col justify-start items-center h-screen w-screen">
-            <div class="flex flex-col justify-center mt-[20rem] md:mt-[10rem] items-center bg-[rgba(_0,_0,_0,_0.55_)] [box-shadow:0_8px_32px_0_rgba(_31,_38,_135,_0.37_)] backdrop-filter backdrop-blur-[2px] rounded-[10px] border-[1px] border-[solid] border-[rgba(255,255,255,0.18)]
+            <div class="flex flex-col justify-center mt-[20rem] md:mt-[15rem] items-center bg-[rgba(_0,_0,_0,_0.55_)] [box-shadow:0_8px_32px_0_rgba(_31,_38,_135,_0.37_)] backdrop-filter backdrop-blur-[2px] rounded-[10px] border-[1px] border-[solid] border-[rgba(255,255,255,0.18)]
         dark:bg-[rgba(_0,_0,_0,_0.7_)] dark:[box-shadow:0_8px_32px_0_rgba(_31,_38,_135,_0.37_)] dark:backdrop-filter dark:backdrop-blur-[14.5px] dark:rounded-[10px] dark:border-[1px] dark:border-[solid] dark:border-[rgba(255,255,255,0.18)] p-10 md:p-20 lg:p-32">
               <h2 class="text-5xl text-white dark:text-white">Sample App</h2>
               <p class="text-white dark:text-white mt-5 mb-2">Build on this...</p>
