@@ -54,12 +54,6 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
-          cache-dependency-path: ./${{ steps.detect-package-manager.outputs.lockfile }}
       - name: Yarn PnP Setup
         uses: Araxeus/setup-yarn-pnp-action@v1
         with:
