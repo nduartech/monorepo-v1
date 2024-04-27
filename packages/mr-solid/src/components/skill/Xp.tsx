@@ -41,7 +41,25 @@ import SkillButtonThin from "./SkillButtonThin";
     },
     {
       context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
-      skillList: ["css","js","ts","java","angularjs,ts","spring-boot,java","spring-cloud,java","spring-integration,java","spring-security,java","yavi,java","mongo"],
+      skillList: ["css","js","ts","java","angularjs,ts","spring-boot,java","mongo","hazelcast,java"],
+      title: "Treasury Services Online Banking: Challenges (cont.)",
+      blob: ""
+    },
+    {
+      context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
+      skillList: ["css","js","ts","java","angularjs,ts","spring-boot,java","spring-cloud,java","spring-integration,java","spring-security,java","yavi,java","mongo","hazelcast,java"],
+      title: "Treasury Services Online Banking: Challenges (cont.)",
+      blob: ""
+    },
+    {
+      context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
+      skillList: ["css","js","ts","java","angularjs,ts","spring-boot,java","spring-cloud,java","spring-integration,java","spring-security,java","yavi,java","mongo","hazelcast,java"],
+      title: "Treasury Services Online Banking: Challenges (cont.)",
+      blob: ""
+    },
+    {
+      context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
+      skillList: ["css","js","ts","angularjs,ts"],
       title: "Treasury Services Online Banking: Challenges (cont.)",
       blob: ""
     },
