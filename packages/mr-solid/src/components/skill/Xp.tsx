@@ -64,7 +64,7 @@ function Xp(props: any) {
      onMouseOut={()=>{
        setFilters([]);
      }}>
-      <div class="flex flex-col justify-center items-center h-3/6 min-h-fit w-full md:h-full md:w-4/12 lg:w-3/12 bg-gray-800 overflow-y-auto">
+      <div class="flex flex-col justify-center items-center h-3/6 min-h-fit w-full md:h-full md:w-4/12 lg:w-3/12 bg-slate-800 overflow-y-auto">
         <div class="w-11/12 min-h-fit">
           <Show when={page() === 0}>
             <div class="w-full h-fit flex flex-row md:flex-col justify-center items-center md:items-end top space-x-10 min-h-fit">
@@ -134,16 +134,14 @@ function Xp(props: any) {
         <div class="w-1/2 h-fit flex flex-row justify-center items-center bottom space-x-10 min-h-fit bottom-5">
           <div class="flex flex-row justify-center items-center"
                onClick={() => getPrevPage()}>
-            <i
-              class={"iconoir-arrow-left-tag before:size-8 " + (page() > 0 ? "before:text-regal-blue-100" : "before:text-gray-600") + " m-2"}>
+            <i class={"iconoir-arrow-left-tag before:size-8 " + (page() > 0 ? "before:text-regal-blue-100" : "before:text-gray-700") + " m-2"}>
             </i>
-            <p class={(page() > 0 ? "text-regal-blue-100" : "text-gray-600") + " text-xs font-light"}>Back</p>
+            <p class={(page() > 0 ? "text-regal-blue-100" : "text-gray-700") + " text-xs font-light"}>Back</p>
           </div>
           <div class="flex flex-row justify-center items-center"
                onClick={() => getNextPage()}>
-            <p
-              class={(page() < pages.length - 1 ? "text-regal-blue-100" : "text-gray-600") + " text-xs font-light"}>Next</p>
-            <i class={"iconoir-arrow-right-tag before:size-8 "+(page()<pages.length-1?"before:text-regal-blue-100":"before:text-gray-600")+" m-2"}>
+            <p class={(page() < pages.length - 1 ? "text-regal-blue-100" : "text-gray-700") + " text-xs font-light"}>Next</p>
+            <i class={"iconoir-arrow-right-tag before:size-8 "+(page()<pages.length-1?"before:text-regal-blue-100":"before:text-gray-700")+" m-2"}>
             </i>
           </div>
         </div>
