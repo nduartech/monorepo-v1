@@ -96,16 +96,22 @@ const skills = () => [
     link: "https://spring.io/projects/spring-security"
   },
   {
-    label: "YAVI",
-    skill: "yavi,java",
-    category: "back-end",
-    link: "https://yavi.ik.am/"
-  },
-  {
     label: "MongoDB",
     skill: "mongo",
     category: "back-end",
     link: "https://www.mongodb.com/"
+  },
+  {
+    label: "Hazelcast",
+    skill: "hazelcast,java",
+    category: "back-end",
+    link: "https://hazelcast.com/"
+  },
+  {
+    label: "YAVI",
+    skill: "yavi,java",
+    category: "back-end",
+    link: "https://yavi.ik.am/"
   },
   {
     label: "PostgreSQL",

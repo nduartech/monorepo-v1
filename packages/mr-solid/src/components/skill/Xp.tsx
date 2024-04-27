@@ -22,15 +22,27 @@ import SkillButtonThin from "./SkillButtonThin";
       blob: "During my initial period at the bank, I was responsible for building the back-end of a new app for sending ASV, AOA, and AOV requests to Early Warning Systems via an internal service. With the patient guidance of my manager and other team members, I wrote the Spring Boot API from scratch, and contributed to the Angular front-end when needed. We successfully tested and launched the app in production within 7 months, gaining immediate client adoption."
     },
     {
-      context: "While working as a Full Stack Software Engineer at BNY Mellon as part of the SETUP Program...",
-      skillList: ["css","js","ts","java","angularjs,ts","spring-boot,java","spring-cloud,java","mongo"],
-      title: "",
-      blob: ""
+      context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
+      skillList: ["css","js","ts","java","angularjs,ts","spring-boot,java","spring-cloud,java","mongo","hazelcast,java"],
+      title: "Treasury Services Online Banking: Early Days",
+      blob: "Following AVS, I was assigned to my current team, also newly formed at the time. As such, I was personally responsible for the initial setup and structure of our APIs, creating our API gateway, new certificates, as well as quite a bit of the business logic which is still in use today. Our previous work proved crucial, as through it I found I had gained the fundamental knowledge I now needed. During this period I mainly worked on the back end, though did pick up the occasional UI ticket as needed."
+    },
+    {
+      context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
+      skillList: ["java","spring-boot,java"],
+      title: "Treasury Services Online Banking: Challenges",
+      blob: "As the product continued to mature, my role evolved to include more responsibility. During this time, my work was largely open-ended, consisting of solving problems no one else could (nor would be willing to, in some cases) tackle. The first of these was adding RSA SecurId prompts for certain actions based on entitlements. While at first this may not sound too cumbersome, note that the initial spec required the use of a specific jar file (built years prior by another team) in order to access an old SOAP api to make requests.. After some digging however I found that the team that managed the RSA Service was working on a new REST api, though till then they had only granted access to the new version to a select number of applications. After reaching out, we were able to get the access we needed, and from there the implementation became more straightforward—using interceptors and thread-scoped classes to manage the interaction with the service."
+    },
+    {
+      context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
+      skillList: ["java","spring-boot,java","hazelcast,java"],
+      title: "Treasury Services Online Banking: Challenges (cont.)",
+      blob: `While adding RSA was not "simple", it was the simplest of the problems I'll cover here. My next challenge—that of building a demo api experience that completely mimicked application functionality while being simultaneously completely separate from the database (i.e. not touching client data)—was more involved. Fortunately, I wasn't alone, as that summer I was assigned two interns to mentor. Together, we built out the demo environment in record time, putting together endpoints which returned static and mock data, while using Hazelcast cache as a mock database for non-retrieval actions <i>(create, update, delete)</i>. The feature is still currently used by product to model the application for both transitioning and prospective clients.`
     },
     {
       context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
       skillList: ["css","js","ts","java","angularjs,ts","spring-boot,java","spring-cloud,java","spring-integration,java","spring-security,java","yavi,java","mongo"],
-      title: "",
+      title: "Treasury Services Online Banking: Challenges (cont.)",
       blob: ""
     },
     {
