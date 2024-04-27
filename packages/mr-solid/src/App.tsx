@@ -19,7 +19,7 @@ const App: Component = (props: any) => {
   return (
     <div
       class={String(window.localStorage && window.localStorage.getItem("theme") ? window.localStorage.getItem("theme") : document.documentElement.dataset.theme)}>
-      <div class="h-screen w-screen bg-regal-blue-400 dark:bg-regal-blue-950">
+      <div class="h-full w-full bg-regal-blue-400 dark:bg-regal-blue-950 overflow-y-hidden">
         <Nav navItems={nav()}></Nav>
         <div class="page flex flex-row justify-center">
           <div class="page flex flex-row justify-center items-center fixed w-10/12">
