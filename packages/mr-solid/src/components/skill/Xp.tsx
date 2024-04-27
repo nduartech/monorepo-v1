@@ -13,17 +13,23 @@ import SkillButtonThin from "./SkillButtonThin";
       context: "This Website :)",
       skillList: ['css','js','ts','tailwindcss','solidjs,ts','astrojs,ts','mitosisjs,ts'],
       title: "Not Your Average Personal Website",
-      blob: "This site was created not only to serve as the homepage for all things Nathan, it is also a SPA that includes a micro-frontend written in SolidJS (this page), with more to come. The homepage/outer host website was written in Astro, inspired by this <a href='https://medium.com/@sergio.a.soria/setting-up-micro-frontends-with-astro-and-ecma-script-modules-137340d2c520' target='_blank'>excellent Medium post by Sergio A. Arevalo Soria.</a>",
+      blob: "This site was created not only to serve as the homepage for all things Nathan, it is also a SPA that includes a micro-frontend written in SolidJS (this page), with more to come. The homepage/outer host website was written in Astro, inspired by this <a class='text-blue-700 underline' href='https://medium.com/@sergio.a.soria/setting-up-micro-frontends-with-astro-and-ecma-script-modules-137340d2c520' target='_blank'>excellent Medium post by Sergio A. Arevalo Soria.</a>",
     },
     {
       context: "While working as a Full Stack Software Engineer at BNY Mellon as part of the SETUP Program...",
-      skillList: ["js","ts","java","angularjs,ts","spring-boot,java","spring-cloud,java","mongo"],
+      skillList: ["css","js","ts","java","angularjs,ts","spring-boot,java"],
+      title: "Account Validation Services",
+      blob: "During my initial period at the bank, I was responsible for building the back-end of a new app for sending ASV, AOA, and AOV requests to Early Warning Systems via an internal service. With the patient guidance of my manager and other team members, I wrote the Spring Boot API from scratch, and contributed to the Angular front-end when needed. We successfully tested and launched the app in production within 7 months, gaining immediate client adoption."
+    },
+    {
+      context: "While working as a Full Stack Software Engineer at BNY Mellon as part of the SETUP Program...",
+      skillList: ["css","js","ts","java","angularjs,ts","spring-boot,java","spring-cloud,java","mongo"],
       title: "",
       blob: ""
     },
     {
       context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
-      skillList: ["js","ts","java","angularjs,ts","spring-boot,java","spring-cloud,java","spring-integration,java","spring-security,java","yavi,java","mongo"],
+      skillList: ["css","js","ts","java","angularjs,ts","spring-boot,java","spring-cloud,java","spring-integration,java","spring-security,java","yavi,java","mongo"],
       title: "",
       blob: ""
     },
@@ -86,7 +92,7 @@ function Xp(props: any) {
                      a.click();
                      window.URL.revokeObjectURL(url);
                    }).catch(() => alert("Download failed"))}>
-                <p class="text-regal-blue-100 text-xs lg:text-sm font-light">Resume</p>
+                <p class="text-regal-blue-100 text-xs lg:text-sm font-light">Resume PDF</p>
                 <i class="iconoir-page before:size-6 lg:before:size-7 before:text-regal-blue-100 m-2">
                 </i>
               </div>
@@ -113,12 +119,10 @@ function Xp(props: any) {
         class="flex flex-col justify-start items-center h-4/6 min-h-fit w-full md:h-full md:w-8/12 lg:w-9/12 bg-gray-900 pt-5 overflow-y-auto">
         <Show when={page() === 0}>
           <div class="w-9/12 h-full flex flex-col items-center justify-start space-y-3 md:space-y-2 md:justify-center min-h-fit overflow-y-auto no-scrollbar">
-            <p class="text-white text-xs md:text-sm lg:text-xl text-center">As a fullstack software engineer, I've had
-              the opportunity to
-              work with some
-              diverse technology stacks. Here I examine the methodologies and skills I've employed over the course of my
+            <p class="text-white text-xs md:text-sm lg:text-xl text-center">As a Full Stack Software Engineer, I've had
+              the opportunity to tackle some unique problems. Here I examine the methodologies and skills I've employed over the course of my
               career
-              and personal projects.</p>
+              and personal projects <i class="font-serif">(Interactive Resume)</i>.</p>
             <p class="text-gray-600 text-xs text-center">To move forward, hit next. To go back, hit back. Also
               included on this page
               are shortcuts to my LinkedIn profile as well as my resume.</p>
@@ -128,7 +132,7 @@ function Xp(props: any) {
           <div
             class="w-9/12 h-full flex flex-col items-center justify-start space-y-3 md:space-y-2 md:justify-center min-h-fit overflow-y-auto no-scrollbar">
             <p class="text-white text-xs md:text-lg lg:text-xl text-center">{pages[page()].title}</p>
-            <p class="text-regal-blue-100 text-xs md:text-sm text-center" innerHTML={pages[page()].blob}></p>
+            <p class="text-regal-blue-100 text-xs md:text-sm text-center leading-normal md:leading-loose" innerHTML={pages[page()].blob}></p>
           </div>
         </Show>
         <div class="w-1/2 h-fit flex flex-row justify-center items-center bottom space-x-10 min-h-fit bottom-5">
