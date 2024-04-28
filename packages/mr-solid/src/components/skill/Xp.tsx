@@ -17,7 +17,7 @@ import SkillButtonThin from "./SkillButtonThin";
     },
     {
       context: "While working as a Full Stack Software Engineer at BNY Mellon as part of the SETUP Program...",
-      skillList: ["css","js","ts","java","angularjs,ts","spring-boot,java"],
+      skillList: ["css","js","ts","java","angularjs,ts","spring-boot,java","kafka"],
       title: "Account Validation Services",
       blob: "During my initial period at the bank, I was responsible for building the back-end of a new app for sending ASV, AOA, and AOV requests to Early Warning Systems via an internal service. With the patient guidance of my manager and other team members, I wrote the Spring Boot API from scratch, and contributed to the Angular front-end when needed. We successfully tested and launched the app in production within 7 months, gaining immediate client adoption."
     },
@@ -37,37 +37,37 @@ import SkillButtonThin from "./SkillButtonThin";
       context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
       skillList: ["java","spring-boot,java","hazelcast,java"],
       title: "Treasury Services Online Banking: Challenges (cont.)",
-      blob: `While adding RSA was not "simple", it was the simplest of the problems I'll cover here. My next challenge—that of building a demo api experience that completely mimicked application functionality while being simultaneously completely separate from the database (i.e. not touching client data)—was more involved. Fortunately, I wasn't alone, as that summer I was assigned two interns to mentor. Together, we built out the demo environment in record time, putting together endpoints which returned static and mock data, while using Hazelcast cache as a mock database for non-retrieval actions <i>(create, update, delete)</i>. The feature is still currently used by product to model the application for both transitioning and prospective clients.`
+      blob: `While adding RSA was not "simple", it was the simplest of the problems I'll cover here. My next challenge—that of building a demo api experience that completely mimicked application functionality while being simultaneously completely separate from the database (i.e. not touching client data)—was more involved. Fortunately, I wasn't alone, as that summer I was assigned two interns to mentor. Together, we built out the demo environment in record time, putting together endpoints which returned static and mock data, while using Hazelcast cache as a mock database for non-retrieval actions <i>(create, update, delete)</i>. The feature is vital to our product team, allowing them to model the application for both transitioning and prospective clients.`
+    },
+    {
+      context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
+      skillList: ["java","spring-boot,java","spring-integration,java","yavi,java","mongo","hazelcast,java"],
+      title: "Treasury Services Online Banking: Challenges (cont.)",
+      blob: "Perhaps the most daunting of the challenges I tackled though was that of writing a file import service. The service had to able to process large files containing payment data asynchronously, without overwhelming existing services with requests. Said files could be in any of 11 complex csv or fixed-length formats (inherited as a requirement from the legacy system we were aiming to replace), each with their own respective specifications and rules. In order to accomplish this, I used Spring Integrations along with the YAVI validation framework to meticulously build out the service from the ground up—splitting each file into its respective lines, validating each of those lines in their own thread (including both formatting and business logic), and then aggregating the results. The service is a key part of TS Online Banking's ability to transition clients from the previous platform."
+    },
+    {
+      context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
+      skillList: ["java","sql","spring-boot,java","spring-integration,java","mongo","hazelcast,java"],
+      title: "Treasury Services Online Banking: Challenges (cont.)",
+      blob: "If not for imports, migration would easily have been my greatest challenge. At first, we were given extracts of client data regularly by the team that managed and developed the legacy system, which we, in turn, had to import into our own Mongo database. Thus, our initial implementation repurposed the imports service I had previously developed. However, the goal soon shifted to taking the extracts ourself, which meant connecting to the legacy MSSQL and DB2 (running on mainframe) directly. Now, however, we were creating files, which we would then save and read in a separate process before writing to the database.. Not the most efficient, obviously. So once again, I had to rewrite the code to skip the file generation entirely. Despite the hurdles, we got it done in the end."
     },
     {
       context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
       skillList: ["css","js","ts","java","angularjs,ts","spring-boot,java","mongo","hazelcast,java"],
       title: "Treasury Services Online Banking: Challenges (cont.)",
-      blob: ""
-    },
-    {
-      context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
-      skillList: ["css","js","ts","java","angularjs,ts","spring-boot,java","spring-cloud,java","spring-integration,java","spring-security,java","yavi,java","mongo","hazelcast,java"],
-      title: "Treasury Services Online Banking: Challenges (cont.)",
-      blob: ""
-    },
-    {
-      context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
-      skillList: ["css","js","ts","java","angularjs,ts","spring-boot,java","spring-cloud,java","spring-integration,java","spring-security,java","yavi,java","mongo","hazelcast,java"],
-      title: "Treasury Services Online Banking: Challenges (cont.)",
-      blob: ""
+      blob: "While not a personal challenge per se, after almost 3 years with one UI system our team was asked to completely overhaul our application website to match the spec created by a newly formed, dedicated design team. In order to support this change, I personally wrote our new search page, completing the functionality end-to-end (both UI and API code). Some of the features I developed were later added as components in the new design system."
     },
     {
       context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
       skillList: ["css","js","ts","angularjs,ts"],
-      title: "Treasury Services Online Banking: Challenges (cont.)",
-      blob: ""
+      title: "AI Hub",
+      blob: "Currently, while continuing to contribute to Treasury Services, I am also aiding members of the AI Hub team in the development of their micro-frontend site."
     },
     {
       context: "Personal Project",
-      skillList: [],
-      title: "",
-      blob: ""
+      skillList: ["golang"],
+      title: "FIX API",
+      blob: "Built an API wrapper around the QuickFixGo library, which in turn was used to access the IBM FIX Gateway to place requests."
     },
   ];
 

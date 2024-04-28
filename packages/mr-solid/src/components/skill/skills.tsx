@@ -96,6 +96,12 @@ const skills = () => [
     link: "https://spring.io/projects/spring-security"
   },
   {
+    label: "Apache Kafka",
+    skill: "kafka",
+    category: "back-end",
+    link: "https://kafka.apache.org/"
+  },
+  {
     label: "MongoDB",
     skill: "mongo",
     category: "back-end",
