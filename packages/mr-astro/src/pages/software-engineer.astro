@@ -4,7 +4,6 @@ import SE from "../components/se/SE.tsx";
 ---
 <script >
   import { navigate } from "astro:transitions/client";
-  console.log(window.location.pathname);
   if (window.location.pathname === "/software-engineer/") {
     let navState = false;
     const navClicked = ($event: any) => {
