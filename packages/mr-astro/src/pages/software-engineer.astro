@@ -4,7 +4,7 @@ import SE from "../components/se/SE.tsx";
 ---
 <script >
   import { navigate } from "astro:transitions/client";
-  if (window.location.pathname === "/software-engineer/") {
+  if (window.location.pathname === "/software-engineer/" || window.location.pathname === "/software-engineer") {
     let navState = false;
     const navClicked = ($event: any) => {
       if ($event.currentTarget.getAttribute("data-path")) {
