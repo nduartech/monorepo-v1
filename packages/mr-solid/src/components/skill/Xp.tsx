@@ -1,5 +1,4 @@
-// import resume from '../../../resume.pdf';
-import resume from 'https://nduartech.tiiny.site/dist/assets/resume-Cj28BdVG.pdf';
+import resume from '../../../resume.pdf';
 import skillFilters from "./SkillFilters";
 import { createSignal, For, Show } from "solid-js";
 import skillsDict from "./skillsDict";
