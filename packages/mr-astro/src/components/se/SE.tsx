@@ -1,5 +1,5 @@
 // @ts-ignore
-import MicroFrontend from "https://nduartech.tiiny.site/dist/bundle.js";
+import MicroFrontend from "../../../../mr-solid/dist/bundle";
 
 function App() {
   return (
