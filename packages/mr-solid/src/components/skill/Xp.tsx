@@ -104,13 +104,14 @@ function Xp(props: any) {
         <div class="w-11/12 min-h-fit">
           <Show when={page() === 0}>
             <div class="w-full h-fit flex flex-row md:flex-col justify-center items-center md:items-end top space-x-10 min-h-fit">
-              <div class="flex flex-row justify-center items-center"
-                   onClick={() => window.open("https://www.linkedin.com/in/nathanduarte")}>
-                <p class="hidden md:flex text-regal-blue-100 text-xs lg:text-sm font-light">LinkedIn</p>
-                <i class="iconoir-linkedin before:size-7 lg:before:size-8 before:text-regal-blue-100 m-2">
-                </i>
-                <p class="flex md:hidden text-regal-blue-100 text-xs font-light">LinkedIn</p>
-              </div>
+              <a href="https://www.linkedin.com/in/nathanduarte">
+                <div class="flex flex-row justify-center items-center">
+                  <p class="hidden md:flex text-regal-blue-100 text-xs lg:text-sm font-light">LinkedIn</p>
+                  <i class="iconoir-linkedin before:size-7 lg:before:size-8 before:text-regal-blue-100 m-2">
+                  </i>
+                  <p class="flex md:hidden text-regal-blue-100 text-xs font-light">LinkedIn</p>
+                </div>
+              </a>
               <div class="flex flex-row justify-center items-center"
                    onClick={() => fetch(resume).then(resp => resp.blob()).then(blob => {
                      const url = window.URL.createObjectURL(blob);
