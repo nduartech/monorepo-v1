@@ -2,7 +2,7 @@
   "name": "monorepo",
   "packageManager": "yarn@4.1.1",
   "scripts": {
-    "build-main": "yarn workspace mr-solid run build && yarn workspace mr-astro run build && yarn workspace mr-astro run preview"
+    "build-main": "yarn workspace mr-solid run build && sed -i 's@/assets/resume-Cj28BdVG.pdf@https://nduartech.tiiny.site/dist/assets/resume-Cj28BdVG.pdf@g' packages/mr-solid/dist/bundle.js && yarn workspace mr-astro run build && yarn workspace mr-astro run preview"
   },
   "workspaces": [
     "packages/*"
