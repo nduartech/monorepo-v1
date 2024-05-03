@@ -100,7 +100,7 @@ function Xp(props: any) {
      onMouseOut={()=>{
        setFilters([]);
      }}>
-      <div class="flex flex-col justify-center items-center h-3/6 min-h-fit w-full md:h-full md:w-4/12 lg:w-3/12 dark:bg-slate-800 overflow-y-auto">
+      <div class="flex flex-col justify-center items-center h-2/6 min-h-fit w-full md:h-full md:w-4/12 lg:w-3/12 dark:bg-slate-800 overflow-y-auto">
         <div class="w-11/12 min-h-fit">
           <Show when={page() === 0}>
             <div class="w-full h-fit flex flex-row md:flex-col justify-center items-center md:items-end top space-x-10 min-h-fit">
