@@ -6,7 +6,7 @@ function Nav(props: any) {
   const [isClosed, setIsClosed] = createSignal(true);
 
   return (
-    <div class="flex flex-row md:flex-col items-start justify-start w-full h-fit fixed mt-1 ml-1 lg:mt-2 lg:ml-2">
+    <div class="flex flex-row md:flex-col items-start justify-start w-full h-fit mt-1 ml-1 lg:mt-2 lg:ml-2 absolute">
       <div class="flex flex-col items-start justify-start w-fit h-fit navDiv">
         <Show when={isClosed()}>
           <NavButton
