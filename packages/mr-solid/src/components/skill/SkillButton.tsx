@@ -17,8 +17,8 @@ function SkillButton(props: { category: string; skill: string; link: string | UR
           " py-1 mx-2 my-1 px-1.5 text-sm font-medium text-regal-blue-50 dark:text-regal-blue-50 border " +
           "rounded-lg "+(
             !filterButton(filters(),props.skill)?"bg-slate-800 dark:bg-slate-900 border-transparent":
-              props.category==="front-end"?"bg-green-900 dark:bg-green-950 border-transparent" :
-                props.category==="back-end"?"bg-purple-900 dark:bg-purple-950 border-transparent":"")}
+              props.category==="front-end"?"bg-green-800 dark:bg-green-850 border-transparent" :
+                props.category==="back-end"?"bg-purple-800 dark:bg-purple-850 border-transparent":"")}
         data-skill={props.skill}
         onMouseOver={()=>{
           if(filters().length === 0) {
