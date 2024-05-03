@@ -154,7 +154,7 @@ function Xp(props: any) {
               the opportunity to tackle some unique problems. Here I examine the methodologies and skills I've employed over the course of my
               career
               and personal projects <i class="font-serif">(Interactive Resume)</i>.</p>
-            <p class="text-gray-600 text-xs text-center">To move forward, hit next. To go back, hit back. Also
+            <p class="text-regal-blue-100 text-xs text-center">To move forward, hit next. To go back, hit back. Also
               included on this page
               are shortcuts to my LinkedIn profile as well as my resume.</p>
           </div>
