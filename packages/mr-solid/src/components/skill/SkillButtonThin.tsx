@@ -14,7 +14,7 @@ function SkillButtonThin(props: { category: string; skill: string; link: string 
     <>
       <Show when={/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)} fallback={
         <div
-          class={"skillButton min-w-fit flex flex-row space-x-0.5 items-center justify-center" +
+          class={"skillButton cursor-pointer min-w-fit flex flex-row space-x-0.5 items-center justify-center" +
             " py-0.5 mx-2 my-0.5 px-1 text-xs font-medium text-regal-blue-50 dark:text-regal-blue-50 border " +
             "rounded-lg " + (
               !filterButton(filters(), props.skill) ? "bg-slate-800 dark:bg-slate-900 border-transparent" :

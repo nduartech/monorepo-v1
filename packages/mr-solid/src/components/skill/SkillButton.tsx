@@ -13,7 +13,7 @@ function SkillButton(props: { category: string; skill: string; link: string | UR
   return (
     <>
       <div
-        class={"skillButton min-w-fit flex flex-row space-x-1.5 items-center justify-center" +
+        class={"skillButton cursor-pointer min-w-fit flex flex-row space-x-1.5 items-center justify-center" +
           " py-1 mx-2 my-1 px-1.5 text-sm font-medium text-regal-blue-50 dark:text-regal-blue-50 border " +
           "rounded-lg "+(
             !filterButton(filters(),props.skill)?"bg-slate-800 dark:bg-slate-900 border-transparent":

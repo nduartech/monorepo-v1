@@ -104,7 +104,7 @@ function Xp(props: any) {
         <div class="w-11/12 min-h-fit">
           <Show when={page() === 0}>
             <div class="w-full h-fit flex flex-row md:flex-col justify-center items-center md:items-end top space-x-10 min-h-fit">
-              <a href="https://www.linkedin.com/in/nathanduarte">
+              <a href="https://www.linkedin.com/in/nathanduarte" class="cursor-pointer">
                 <div class="flex flex-row justify-center items-center">
                   <p class="hidden md:flex text-regal-blue-100 text-xs lg:text-sm font-light">LinkedIn</p>
                   <i class="iconoir-linkedin before:size-7 lg:before:size-8 before:text-regal-blue-100 m-2">
@@ -112,7 +112,7 @@ function Xp(props: any) {
                   <p class="flex md:hidden text-regal-blue-100 text-xs font-light">LinkedIn</p>
                 </div>
               </a>
-              <div class="flex flex-row justify-center items-center"
+              <div class="flex flex-row justify-center items-center cursor-pointer"
                    onClick={() => fetch(resume).then(resp => resp.blob()).then(blob => {
                      const url = window.URL.createObjectURL(blob);
                      const a = document.createElement("a");
@@ -167,13 +167,13 @@ function Xp(props: any) {
           </div>
         </Show>
         <div class="w-1/2 h-fit flex flex-row justify-center items-center space-x-10">
-          <div class="flex flex-row justify-center items-center"
+          <div class="flex flex-row justify-center items-center cursor-pointer"
                onClick={() => getPrevPage()}>
             <i class={"iconoir-arrow-left-tag before:size-8 " + (page() > 0 ? "before:text-regal-blue-100" : "before:text-gray-700") + " m-2"}>
             </i>
             <p class={(page() > 0 ? "text-regal-blue-100" : "text-gray-700") + " text-xs font-light"}>Back</p>
           </div>
-          <div class="flex flex-row justify-center items-center"
+          <div class="flex flex-row justify-center items-center cursor-pointer"
                onClick={() => getNextPage()}>
             <p class={(page() < pages.length - 1 ? "text-regal-blue-100" : "text-gray-700") + " text-xs font-light"}>Next</p>
             <i class={"iconoir-arrow-right-tag before:size-8 "+(page()<pages.length-1?"before:text-regal-blue-100":"before:text-gray-700")+" m-2"}>

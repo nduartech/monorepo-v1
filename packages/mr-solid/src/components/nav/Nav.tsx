@@ -28,7 +28,7 @@ function Nav(props: any) {
         <ul class="flex flex-row lg:flex-col items-start justify-start w-fit h-fit lg:space-y-1.5 list-none">
           <Show when={!isClosed()}>
             <NavButton
-              icon="web-window-xmark"
+              icon="xmark"
               label="Close"
               onClick={()=> {
                 setIsClosed(true);
