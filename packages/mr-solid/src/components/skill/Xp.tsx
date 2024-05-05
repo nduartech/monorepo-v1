@@ -13,7 +13,7 @@ import SkillButtonThin from "./SkillButtonThin";
       context: "This Website :)",
       skillList: ['css','js','ts','tailwindcss','solidjs,ts','astrojs,ts','mitosisjs,ts'],
       title: "Not Your Average Personal Website",
-      blob: "This site was created not only to serve as the homepage for all things Nathan, it is also effectively a Single Page Application (SPA) that includes a micro-frontend written in SolidJS (this page), with more to come. The homepage/outer host website was written in Astro, inspired by this <a class='text-blue-700 underline' href='https://medium.com/@sergio.a.soria/setting-up-micro-frontends-with-astro-and-ecma-script-modules-137340d2c520' target='_blank'>excellent Medium post by Sergio A. Arevalo Soria.</a>",
+      blob: "This site was created not only to serve as the homepage for all things Nathan, it is also effectively a Single Page Application (SPA) that includes a micro-frontend written in SolidJS (this page), with more to come. The homepage/outer host website was written in Astro, inspired by this <a class='text-regal-blue-300 underline' href='https://medium.com/@sergio.a.soria/setting-up-micro-frontends-with-astro-and-ecma-script-modules-137340d2c520' target='_blank'>excellent Medium post by Sergio A. Arevalo Soria.</a>",
     },
     {
       context: "While working as a Full Stack Software Engineer at BNY Mellon as part of the SETUP Program...",
@@ -147,9 +147,9 @@ function Xp(props: any) {
         </div>
       </div>
       <div
-        class="flex flex-col justify-start items-center h-4/6 w-full md:h-full md:w-8/12 lg:w-9/12 bg-gradient-to-br from-regal-blue-500 to-regal-blue-600 dark:from-gray-900 dark:to-gray-950 pt-5 overflow-y-hidden">
+        class="flex flex-col justify-center items-center h-4/6 w-full md:h-full md:w-8/12 lg:w-9/12 bg-gradient-to-br from-regal-blue-400 to-regal-blue-700 dark:from-gray-900 dark:to-gray-950  overflow-y-hidden">
         <Show when={page() === 0}>
-          <div class="w-9/12 h-full flex flex-col items-center justify-start space-y-3 overflow-y-auto no-scrollbar">
+          <div class="w-9/12 h-full flex flex-col items-center justify-center space-y-3 overflow-y-auto no-scrollbar">
             <p class="text-white text-xs md:text-sm lg:text-xl text-center pt-5 pb-5">As a Full Stack Software Engineer, I've had
               the opportunity to tackle some unique problems. Here I examine the methodologies and skills I've employed over the course of my
               career
@@ -161,7 +161,7 @@ function Xp(props: any) {
         </Show>
         <Show when={page() !== 0}>
           <div
-            class="w-9/12 h-full flex flex-col items-center justify-start space-y-0 overflow-y-auto no-scrollbar">
+            class="w-9/12 h-full flex flex-col items-center justify-center space-y-0 overflow-y-auto no-scrollbar">
             <p class="text-white text-xs md:text-lg lg:text-xl text-center pt-5 pb-5">{pages[page()].title}</p>
             <p class="text-regal-blue-100 text-xs md:text-sm text-center leading-normal md:leading-loose" innerHTML={pages[page()].blob}></p>
           </div>

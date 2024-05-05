@@ -3,6 +3,7 @@
 ---
 <script>
   let page = document.documentElement;
+  let metaTheme = document.querySelector('meta[name="theme-color"]');
   const eventClicked = () => {
     page.classList.contains("dark") ? page.classList.remove("dark") : page.classList.add("dark");
     window.localStorage.setItem("theme", window.localStorage.getItem("theme") === "light" ? "dark" : "light");
@@ -11,11 +12,14 @@
     if (window.localStorage.getItem("theme") === "light" && dayNightMoon !== null && dayNightSun !== null) {
       dayNightSun.setAttribute("class", "sun hidden");
       dayNightMoon.setAttribute("class", "moon inline-flex");
-      document.querySelector('meta[name="theme-color"]').setAttribute("content", "#23bcff");
+      document.documentElement.dataset.theme = 'light';
+      if(metaTheme){metaTheme.setAttribute("content", "#23bcff");}
     } else if (window.localStorage.getItem("theme") === "dark" && dayNightMoon !== null && dayNightSun !== null) {
+      document.documentElement.dataset.theme = 'dark';
       dayNightSun.setAttribute("class", "sun inline-flex");
       dayNightMoon.setAttribute("class", "moon hidden");
-      document.querySelector('meta[name="theme-color"]').setAttribute("content", "#012d50");
+      document.documentElement.dataset.theme = 'dark';
+      if(metaTheme){metaTheme.setAttribute("content", "#012d50");}
     }
   };
 
@@ -42,14 +46,14 @@
         document.documentElement.classList.remove("dark");
         document.documentElement.dataset.theme = 'light';
         window.localStorage.setItem("theme", theme);
-        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#23bcff");
+        if(metaTheme){metaTheme.setAttribute("content", "#23bcff");}
       }
     } else if (theme === "dark") {
       if (!document.documentElement.classList.contains("dark")) {
         document.documentElement.classList.add("dark");
         document.documentElement.dataset.theme = 'dark';
         window.localStorage.setItem("theme", theme);
-        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#012d50");
+        if(metaTheme){metaTheme.setAttribute("content", "#012d50");}
       }
     }
     dayNightButton = document.querySelector(".dayNight");

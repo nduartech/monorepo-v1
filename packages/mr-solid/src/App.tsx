@@ -1,4 +1,4 @@
-import { Component, For } from "solid-js";
+import { Component } from "solid-js";
 import "./index.css";
 import Nav from "./components/nav/Nav";
 import SkillBar from './components/skill/SkillBar';
@@ -18,7 +18,7 @@ const App: Component = (props: any) => {
 
   return (
     <div
-      class={String(window.localStorage && window.localStorage.getItem("theme") ? window.localStorage.getItem("theme") : document.documentElement.dataset.theme)+" flex h-full max-w-screen"}>
+      class="flex h-full max-w-screen">
       <div class="h-full max-h-screen w-full overflow-hidden">
         <Nav navItems={nav()}></Nav>
         <div class="page flex flex-col w-full h-full space-y-10">
