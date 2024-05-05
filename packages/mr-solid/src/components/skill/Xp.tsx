@@ -100,7 +100,7 @@ function Xp(props: any) {
      onMouseOut={()=>{
        setFilters([]);
      }}>
-      <div class="flex flex-col justify-center items-center h-2/6 min-h-fit w-full md:h-full md:w-4/12 lg:w-3/12 dark:bg-slate-800 overflow-y-auto">
+      <div class="flex flex-col justify-center items-center h-2/6 min-h-fit w-full md:h-full md:w-4/12 lg:w-3/12 overflow-y-auto">
         <div class="w-11/12 min-h-fit">
           <Show when={page() === 0}>
             <div class="w-full h-fit flex flex-row md:flex-col justify-center items-center md:items-end top space-x-10 min-h-fit">
@@ -147,7 +147,7 @@ function Xp(props: any) {
         </div>
       </div>
       <div
-        class="flex flex-col justify-start items-center h-4/6 min-h-fit w-full md:h-full md:w-8/12 lg:w-9/12 bg-regal-blue-500 dark:bg-gray-900 pt-5 overflow-y-auto">
+        class="flex flex-col justify-start items-center h-4/6 min-h-fit w-full md:h-full md:w-8/12 lg:w-9/12 bg-gradient-to-br from-regal-blue-500 to-regal-blue-600 dark:from-gray-900 dark:to-gray-950 pt-5 overflow-y-auto">
         <Show when={page() === 0}>
           <div class="w-9/12 h-full flex flex-col items-center justify-start space-y-3 md:space-y-2 md:justify-center min-h-fit overflow-y-auto no-scrollbar">
             <p class="text-white text-xs md:text-sm lg:text-xl text-center">As a Full Stack Software Engineer, I've had
