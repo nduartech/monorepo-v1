@@ -166,7 +166,7 @@ function Xp(props: any) {
             <p class="text-regal-blue-100 text-xs md:text-sm text-center leading-normal md:leading-loose" innerHTML={pages[page()].blob}></p>
           </div>
         </Show>
-        <div class="w-1/2 h-fit flex flex-row justify-center items-center bottom space-x-10 min-h-fit bottom-5">
+        <div class="w-1/2 h-fit flex flex-row justify-center items-center bottom space-x-10 bottom-5">
           <div class="flex flex-row justify-center items-center"
                onClick={() => getPrevPage()}>
             <i class={"iconoir-arrow-left-tag before:size-8 " + (page() > 0 ? "before:text-regal-blue-100" : "before:text-gray-700") + " m-2"}>
