@@ -149,7 +149,7 @@ function Xp(props: any) {
       <div
         class="flex flex-col justify-start items-center h-4/6 min-h-fit w-full md:h-full md:w-8/12 lg:w-9/12 bg-gradient-to-br from-regal-blue-500 to-regal-blue-600 dark:from-gray-900 dark:to-gray-950 pt-5 overflow-y-auto">
         <Show when={page() === 0}>
-          <div class="w-9/12 h-full flex flex-col items-center justify-start space-y-3 md:space-y-2 md:justify-center min-h-fit overflow-y-auto no-scrollbar">
+          <div class="w-9/12 h-full flex flex-col items-center justify-start space-y-3 md:space-y-2 md:justify-center overflow-y-auto no-scrollbar">
             <p class="text-white text-xs md:text-sm lg:text-xl text-center">As a Full Stack Software Engineer, I've had
               the opportunity to tackle some unique problems. Here I examine the methodologies and skills I've employed over the course of my
               career
