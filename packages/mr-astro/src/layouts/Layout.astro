@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
+import DayNightToggle from "../components/common/DayNightToggle.astro";
 interface Props {
 	title: string;
 }
@@ -32,21 +33,12 @@ const { title } = Astro.props;
           }
         }
     </script>
-    <script>
-      let theme =String(window.localStorage && window.localStorage.getItem("theme") ? window.localStorage.getItem("theme") : document.documentElement.dataset.theme);
-      document.body.classList.add(theme);
-      let meta = document.createElement('meta');
-      meta.name = "theme-color";
-      if(theme==="dark") {
-        meta.content = "#012d50";
-      } else {
-        meta.content = "#23bcff";
-      }
-      document.getElementsByTagName('head')[0].appendChild(meta);
-    </script>
 	</head>
 	<body>
   <div class="dark:bg-[url('/landing.svg')] bg-[url('/landing-light.svg')] bg-cover bg-bottom min-h-screen overflow-clip">
+    <div class="flex flex-row w-full h-20 justify-end items-start p-4 absolute">
+      <DayNightToggle></DayNightToggle>
+    </div>
 		<slot />
   </div>
 	</body>

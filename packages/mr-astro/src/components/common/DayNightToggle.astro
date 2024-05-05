@@ -2,8 +2,8 @@
 
 ---
 <script>
+  let page = document.documentElement;
   const eventClicked = () => {
-    let page = document.documentElement;
     page.classList.contains("dark") ? page.classList.remove("dark") : page.classList.add("dark");
     window.localStorage.setItem("theme", window.localStorage.getItem("theme") === "light" ? "dark" : "light");
     dayNightSun = document.querySelector(".sun");
@@ -48,31 +48,27 @@
         window.localStorage.setItem("theme", theme);
       }
     }
-    if (window.location.pathname === "/") {
-      dayNightButton = document.querySelector(".dayNight");
-      dayNightSun = document.querySelector(".sun");
-      dayNightMoon = document.querySelector(".moon");
-      if (theme === "light" && dayNightMoon !== null && dayNightSun !== null) {
-        dayNightSun.setAttribute("class","sun hidden");
-        dayNightMoon.setAttribute("class", "moon inline-flex");
-      } else if (theme === "dark" && dayNightMoon !== null && dayNightSun !== null) {
-        dayNightSun.setAttribute("class","sun inline-flex");
-        dayNightMoon.setAttribute("class", "moon hidden");
-      }
-
-      dayNightButton.addEventListener("click", eventClicked);
+    dayNightButton = document.querySelector(".dayNight");
+    dayNightSun = document.querySelector(".sun");
+    dayNightMoon = document.querySelector(".moon");
+    if (theme === "light" && dayNightMoon !== null && dayNightSun !== null) {
+      dayNightSun.setAttribute("class","sun hidden");
+      dayNightMoon.setAttribute("class", "moon inline-flex");
+    } else if (theme === "dark" && dayNightMoon !== null && dayNightSun !== null) {
+      dayNightSun.setAttribute("class","sun inline-flex");
+      dayNightMoon.setAttribute("class", "moon hidden");
     }
+
+    dayNightButton.addEventListener("click", eventClicked);
   };
 
   document.addEventListener("astro:page-load", pageLoaded);
   document.addEventListener("astro:before-preparation", () => {
-    if (window.location.pathname === "/") {
-      dayNightButton && dayNightButton.removeEventListener("click", eventClicked);
-      dayNightButton = null;
-    }
+    dayNightButton && dayNightButton.removeEventListener("click", eventClicked);
+    dayNightButton = null;
   });
 </script>
-<div class="dayNight">
+<div class="dayNight z-50">
   <div class="moon"><i class="iconoir-half-moon before:size-8 before:text-regal-blue-100"></i></div>
   <div class="sun"><i class="iconoir-sun-light before:size-8 before:text-regal-blue-100"></i></div>
 </div>
