@@ -11,7 +11,9 @@ import me from '../../../public/me.png';
 <script>
   import { navigate } from "astro:transitions/client";
   const seListener = () => {
+    setTimeout(function(){
     navigate("/software-engineer");
+    }, 300);
   };
   let seButton:any = null;
   document.addEventListener("astro:page-load", () => {
