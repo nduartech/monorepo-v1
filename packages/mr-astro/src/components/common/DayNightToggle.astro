@@ -2,6 +2,8 @@
 
 ---
 <script>
+  import { document } from "postcss";
+
   let page = document.documentElement;
   const eventClicked = () => {
     page.classList.contains("dark") ? page.classList.remove("dark") : page.classList.add("dark");
@@ -11,9 +13,11 @@
     if (window.localStorage.getItem("theme") === "light" && dayNightMoon !== null && dayNightSun !== null) {
       dayNightSun.setAttribute("class", "sun hidden");
       dayNightMoon.setAttribute("class", "moon inline-flex");
+      document.querySelector('meta[name="theme-color"]').setAttribute("content", "#23bcff");
     } else if (window.localStorage.getItem("theme") === "dark" && dayNightMoon !== null && dayNightSun !== null) {
       dayNightSun.setAttribute("class", "sun inline-flex");
       dayNightMoon.setAttribute("class", "moon hidden");
+      document.querySelector('meta[name="theme-color"]').setAttribute("content", "#012d50");
     }
   };
 
@@ -40,12 +44,14 @@
         document.documentElement.classList.remove("dark");
         document.documentElement.dataset.theme = 'light';
         window.localStorage.setItem("theme", theme);
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#23bcff");
       }
     } else if (theme === "dark") {
       if (!document.documentElement.classList.contains("dark")) {
         document.documentElement.classList.add("dark");
         document.documentElement.dataset.theme = 'dark';
         window.localStorage.setItem("theme", theme);
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#012d50");
       }
     }
     dayNightButton = document.querySelector(".dayNight");
