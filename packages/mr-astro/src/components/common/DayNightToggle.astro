@@ -140,7 +140,9 @@ import moon from "../../../public/half-moon.svg";
       }
     }
 
-    dayNightButton.addEventListener("click", eventClicked);
+    if(dayNightButton!==null) {
+      dayNightButton.addEventListener("click", eventClicked);
+    }
   };
 
   document.addEventListener("astro:page-load", pageLoaded);
