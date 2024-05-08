@@ -51,7 +51,7 @@
         stroke-dashoffset: 78.8388442993164px;
         stroke-dasharray: 78.8388442993164px;
         -webkit-transition: stroke-dashoffset 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
-        transition: stroke-dashoffset 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0s
+        transition: stroke-dashoffset 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
     }
 
     svg.nav.active .svg-elem-5 {
@@ -62,6 +62,7 @@
         color: transparent;
         -webkit-transition: color 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
         transition: color 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+
     }
 
     p.navIconLabel.active {
