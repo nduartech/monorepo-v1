@@ -30,13 +30,13 @@ import moon from "../../../public/half-moon.svg";
       dayNightSun = document.querySelector(".sun svg");
       dayNightSun.classList.contains("active")?dayNightSun.classList.remove("active"):void(0);
       setTimeout(function(){
-        dayNightSun.classList.remove("w-10","h-10");
+        dayNightSun.classList.remove("w-8","h-8");
         dayNightSun.classList.add("hidden","w-0","h-0");
       }, 300);
       setTimeout(function() {
         dayNightMoon = document.querySelector(".moon svg");
         dayNightMoon.classList.remove("hidden","w-0","h-0");
-        dayNightMoon.classList.add("w-10","h-10");
+        dayNightMoon.classList.add("w-8","h-8");
         setTimeout(function() {dayNightMoon.classList.contains("active") ? void (0) : dayNightMoon.classList.add("active");}, 300);
       }, 300);
       if (metaTheme) {
@@ -47,13 +47,13 @@ import moon from "../../../public/half-moon.svg";
       dayNightMoon = document.querySelector(".moon svg");
       dayNightMoon.classList.contains("active")?dayNightMoon.classList.remove("active"):void(0);
       setTimeout(function(){
-        dayNightMoon.classList.remove("w-10","h-10");
+        dayNightMoon.classList.remove("w-8","h-8");
         dayNightMoon.classList.add("hidden","w-0","h-0");
       }, 300);
       setTimeout(function() {
         dayNightSun = document.querySelector(".sun svg");
         dayNightSun.classList.remove("hidden","w-0","h-0");
-        dayNightSun.classList.add("w-10","h-10");
+        dayNightSun.classList.add("w-8","h-8");
         setTimeout(function() {
           dayNightSun.classList.contains("active") ? void (0) : dayNightSun.classList.add("active");
         }, 300);
@@ -107,13 +107,13 @@ import moon from "../../../public/half-moon.svg";
       dayNightSun = document.querySelector(".sun svg");
       dayNightSun.classList.contains("active")?dayNightSun.classList.remove("active"):void(0);
       setTimeout(function(){
-        dayNightSun.classList.remove("w-10","h-10");
+        dayNightSun.classList.remove("w-8","h-8");
         dayNightSun.classList.add("hidden","w-0","h-0");
       }, 300);
       setTimeout(function() {
         dayNightMoon = document.querySelector(".moon svg");
         dayNightMoon.classList.remove("hidden","w-0","h-0");
-        dayNightMoon.classList.add("w-10","h-10");
+        dayNightMoon.classList.add("w-8","h-8");
         setTimeout(function() {dayNightMoon.classList.contains("active") ? void (0) : dayNightMoon.classList.add("active");}, 300);
       }, 300);
       if (metaTheme) {
@@ -124,13 +124,13 @@ import moon from "../../../public/half-moon.svg";
       dayNightMoon = document.querySelector(".moon svg");
       dayNightMoon.classList.contains("active")?dayNightMoon.classList.remove("active"):void(0);
       setTimeout(function(){
-        dayNightMoon.classList.remove("w-10","h-10");
+        dayNightMoon.classList.remove("w-8","h-8");
         dayNightMoon.classList.add("hidden","w-0","h-0");
       }, 300);
       setTimeout(function() {
         dayNightSun = document.querySelector(".sun svg");
         dayNightSun.classList.remove("hidden","w-0","h-0");
-        dayNightSun.classList.add("w-10","h-10");
+        dayNightSun.classList.add("w-8","h-8");
         setTimeout(function() {
           dayNightSun.classList.contains("active") ? void (0) : dayNightSun.classList.add("active");
         }, 300);
@@ -151,23 +151,23 @@ import moon from "../../../public/half-moon.svg";
     dayNightButton = null;
   });
 </script>
-<div class="dayNight z-50 cursor-pointer">
+<div class="dayNight z-50 cursor-pointer mt-0.5 mr-0.5 lg:mt-1.5 lg:mr-1.5">
   <div class="sun">
-    <svg class="w-10 h-10" width="100%" height="100%" stroke-width="0.7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ddf2ff">
-      <path d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z" stroke="#ddf2ff" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-1"></path>
-      <path d="M22 12L23 12" stroke="#ddf2ff" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-2"></path>
-      <path d="M12 2V1" stroke="#ddf2ff" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-3"></path>
-      <path d="M12 23V22" stroke="#ddf2ff" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-4"></path>
-      <path d="M20 20L19 19" stroke="#ddf2ff" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-5"></path>
-      <path d="M20 4L19 5" stroke="#ddf2ff" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-6"></path>
-      <path d="M4 20L5 19" stroke="#ddf2ff" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-7"></path>
-      <path d="M4 4L5 5" stroke="#ddf2ff" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-8"></path>
-      <path d="M1 12L2 12" stroke="#ddf2ff" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-9"></path>
+    <svg class="w-8 h-8" width="100%" height="100%" stroke-width="0.9" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ddf2ff">
+      <path d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z" stroke="#ddf2ff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-1"></path>
+      <path d="M22 12L23 12" stroke="#ddf2ff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-2"></path>
+      <path d="M12 2V1" stroke="#ddf2ff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-3"></path>
+      <path d="M12 23V22" stroke="#ddf2ff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-4"></path>
+      <path d="M20 20L19 19" stroke="#ddf2ff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-5"></path>
+      <path d="M20 4L19 5" stroke="#ddf2ff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-6"></path>
+      <path d="M4 20L5 19" stroke="#ddf2ff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-7"></path>
+      <path d="M4 4L5 5" stroke="#ddf2ff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-8"></path>
+      <path d="M1 12L2 12" stroke="#ddf2ff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-9"></path>
     </svg>
   </div>
   <div class="moon">
-    <svg class="w-10 h-10" width="100%" height="100%" stroke-width="0.7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ddf2ff">
-      <path d="M3 11.5066C3 16.7497 7.25034 21 12.4934 21C16.2209 21 19.4466 18.8518 21 15.7259C12.4934 15.7259 8.27411 11.5066 8.27411 3C5.14821 4.55344 3 7.77915 3 11.5066Z" stroke="#ddf2ff" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-1"></path>
+    <svg class="w-8 h-8" width="100%" height="100%" stroke-width="0.9" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ddf2ff">
+      <path d="M3 11.5066C3 16.7497 7.25034 21 12.4934 21C16.2209 21 19.4466 18.8518 21 15.7259C12.4934 15.7259 8.27411 11.5066 8.27411 3C5.14821 4.55344 3 7.77915 3 11.5066Z" stroke="#ddf2ff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" class="svg-elem-1"></path>
     </svg>
   </div>
 </div>
