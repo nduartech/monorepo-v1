@@ -22,15 +22,15 @@ function Nav(props: any) {
               document.querySelectorAll("p.navIconLabel").forEach(svg => svg.classList.remove("active"));
               setTimeout(function() {
                 setIsClosed(false);
+                let navClosed = new Event("navClosed");
+                let navOpened = new Event("navOpened");
+                if (!isClosed()) {
+                  document.dispatchEvent(navOpened);
+                }
+                if (isClosed()) {
+                  document.dispatchEvent(navClosed);
+                }
               }, 300);
-              let navClosed = new Event("navClosed");
-              let navOpened = new Event("navOpened");
-              if (!isClosed()) {
-                document.dispatchEvent(navOpened);
-              }
-              if (isClosed()) {
-                document.dispatchEvent(navClosed);
-              }
             }}
           ></NavButton>
         </Show>
@@ -43,16 +43,16 @@ function Nav(props: any) {
                 document.querySelectorAll("svg.nav").forEach(svg => svg.classList.remove("active"));
                 document.querySelectorAll("p.navIconLabel").forEach(svg => svg.classList.remove("active"));
                 setTimeout(function() {
-                  setIsClosed(true);
+                  setIsClosed(true)
+                  let navClosed = new Event("navClosed");
+                  let navOpened = new Event("navOpened");
+                  if (!isClosed()) {
+                    document.dispatchEvent(navOpened);
+                  }
+                  if (isClosed()) {
+                    document.dispatchEvent(navClosed);
+                  }
                 }, 300);
-                let navClosed = new Event("navClosed");
-                let navOpened = new Event("navOpened");
-                if (!isClosed()) {
-                  document.dispatchEvent(navOpened);
-                }
-                if (isClosed()) {
-                  document.dispatchEvent(navClosed);
-                }
               }}
             ></NavButton>
             <For each={props.navItems}>
