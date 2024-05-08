@@ -7,7 +7,7 @@ function Nav(props: any) {
 
   return (
     <div class="flex flex-row md:flex-col items-start justify-start w-full h-fit absolute">
-      <div class="flex flex-col items-start justify-start w-fit h-fit navDiv mt-1 ml-1 lg:mt-2 lg:ml-2">
+      <div class="flex flex-col items-start justify-start w-fit h-fit navDiv mt-0.5 ml-0.5 lg:mt-1.5 lg:ml-1.5">
         <Show when={isClosed()}>
           <NavButton
             icon="menu"
