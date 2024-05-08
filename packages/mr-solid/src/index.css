@@ -1,3 +1,60 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer {
+    svg.nav .svg-elem-1 {
+        stroke-dashoffset: 20px;
+        stroke-dasharray: 20px;
+        -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+        transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s
+    }
+
+    svg.nav.active .svg-elem-1 {
+        stroke-dashoffset: 0
+    }
+
+    svg.nav .svg-elem-2 {
+        stroke-dashoffset: 20px;
+        stroke-dasharray: 20px;
+        -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s;
+        transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s
+    }
+
+    svg.nav.active .svg-elem-2 {
+        stroke-dashoffset: 0
+    }
+
+    svg.nav .svg-elem-3 {
+        stroke-dashoffset: 20px;
+        stroke-dasharray: 20px;
+        -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s;
+        transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s
+    }
+
+    svg.nav.active .svg-elem-3 {
+        stroke-dashoffset: 0
+    }
+
+    svg.nav .svg-elem-4 {
+        stroke-dashoffset: 31.656723022460938px;
+        stroke-dasharray: 31.656723022460938px;
+        -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+        transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s
+    }
+
+    svg.nav.active .svg-elem-4 {
+        stroke-dashoffset: 0
+    }
+
+    svg.nav .svg-elem-5 {
+        stroke-dashoffset: 78.8388442993164px;
+        stroke-dasharray: 78.8388442993164px;
+        -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+        transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s
+    }
+
+    svg.nav.active .svg-elem-5 {
+        stroke-dashoffset: 0
+    }
+}
