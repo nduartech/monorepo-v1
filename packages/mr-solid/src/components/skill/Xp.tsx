@@ -13,7 +13,7 @@ import SkillButtonThin from "./SkillButtonThin";
       context: "This Website :)",
       skillList: ['css','js','ts','tailwindcss','solidjs,ts','astrojs,ts','mitosisjs,ts'],
       title: "Not Your Average Personal Website",
-      blob: "This site was created not only to serve as the homepage for all things Nathan, it is also effectively a Single Page Application (SPA) that includes a micro-frontend written in SolidJS (this page), with more to come. The homepage/outer host website was written in Astro, inspired by this <a class='text-regal-blue-300 underline' href='https://medium.com/@sergio.a.soria/setting-up-micro-frontends-with-astro-and-ecma-script-modules-137340d2c520' target='_blank'>excellent Medium post by Sergio A. Arevalo Soria.</a>",
+      blob: "This site was created not only to serve as the homepage for all things Nathan, it is also effectively an Astro Single Page Application (SPA) that includes a micro-frontend written in SolidJS (this page), with more to come. The homepage/outer host website was written in Astro, inspired by this <a class='text-regal-blue-300 underline' href='https://medium.com/@sergio.a.soria/setting-up-micro-frontends-with-astro-and-ecma-script-modules-137340d2c520' target='_blank'>excellent Medium post by Sergio A. Arevalo Soria.</a>",
     },
     {
       context: "While working as a Full Stack Software Engineer at BNY Mellon as part of the SETUP Program...",
