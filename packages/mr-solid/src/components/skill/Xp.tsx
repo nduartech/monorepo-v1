@@ -31,7 +31,7 @@ import SkillButtonThin from "./SkillButtonThin";
       context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
       skillList: ["java","spring-boot,java"],
       title: "Treasury Services Online Banking: Challenges",
-      blob: "As the product continued to mature, my role evolved to include more responsibility. During this phase, my tasks predominantly entailed resolving complex, often uncharted issues that demanded innovative solutions. One such challenge involved integrating RSA SecurId prompts for specific actions based on entitlements. Despite initial complexities, adept coordination with the RSA Service team facilitated access to a new REST API, streamlining subsequent implementation through the utilization of interceptors and thread-scoped classes"
+      blob: "As the product continued to mature, my role evolved to include more responsibility. During this phase, my tasks predominantly entailed resolving complex, often uncharted issues that demanded innovative solutions. One such challenge involved integrating RSA SecurId prompts for specific actions based on entitlements. Despite initial complexities, adept coordination with the RSA Service team facilitated access to a new REST API, streamlining subsequent implementation through the utilization of interceptors and thread-scoped classes."
     },
     {
       context: "While working as a Lead Full Stack Software Engineer at BNY Mellon...",
