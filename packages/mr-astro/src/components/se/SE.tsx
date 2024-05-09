@@ -1,5 +1,6 @@
 // @ts-ignore
-import MicroFrontend from "http://localhost:7300/bundle.js";
+import MicroFrontend from "https://nduartech.tiiny.site/dist/bundle.js";
+// import MicroFrontend from "http://localhost:7300/bundle.js";
 
 function App() {
   return (
