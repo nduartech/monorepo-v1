@@ -10,7 +10,7 @@ export default defineConfig({
     prefetchAll: true
   },
   integrations: [
-      solid(),
+      solid({ include: "src/components/se/SE.tsx" }),
       tailwind(),
       {
           name: 'importmap-externals',
