@@ -1,4 +1,3 @@
-import resume from '../../../resume.pdf';
 import skillFilters from "./SkillFilters";
 import { createSignal, For, Show } from "solid-js";
 import skillsDict from "./skillsDict";
@@ -13,7 +12,7 @@ import SkillButtonThin from "./SkillButtonThin";
       context: "This Website :)",
       skillList: ['css','js','ts','tailwindcss','solidjs,ts','astrojs,ts','mitosisjs,ts'],
       title: "Not Your Average Personal Website",
-      blob: "This site was created not only to serve as the homepage for all things Nathan, it is also effectively a SPA (courtesy of Astro's View Transitions) that includes a micro-frontend written in SolidJS (this page), with more to come. The inspiration for this site came from this <a class='text-regal-blue-300 underline' href='https://medium.com/@sergio.a.soria/setting-up-micro-frontends-with-astro-and-ecma-script-modules-137340d2c520' target='_blank'>excellent Medium post by Sergio A. Arevalo Soria.</a>",
+      blob: "This site was created not only to serve as the homepage for all things Nathan, it is also effectively a SPA (courtesy of Astro's <a class='text-regal-blue-300 underline' href='https://docs.astro.build/en/guides/view-transitions/#full-site-view-transitions-spa-mode' target='_blank'>View Transitions</a>) that includes a micro-frontend written in SolidJS (this page), with more to come. The inspiration for this site came from this <a class='text-regal-blue-300 underline' href='https://medium.com/@sergio.a.soria/setting-up-micro-frontends-with-astro-and-ecma-script-modules-137340d2c520' target='_blank'>excellent Medium post by Sergio A. Arevalo Soria.</a>",
     },
     {
       context: "While working as a Full Stack Software Engineer at BNY Mellon as part of the SETUP Program...",
@@ -113,7 +112,7 @@ function Xp(props: any) {
                 </div>
               </a>
               <div class="flex flex-row justify-center items-center cursor-pointer"
-                   onClick={() => fetch(resume).then(resp => resp.blob()).then(blob => {
+                   onClick={() => fetch('https://nduartech.tiiny.site/dist/assets/resume-Cj28BdVG.pdf').then(resp => resp.blob()).then(blob => {
                      const url = window.URL.createObjectURL(blob);
                      const a = document.createElement("a");
                      a.style.display = "none";
